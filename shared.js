@@ -288,35 +288,43 @@ var CurrencySystem = (function() {
     });
 })();
 
-// ===== Language Switcher =====
+// ===== Language Switcher (RU / EN / RO) =====
 (function() {
-    const toggle = document.getElementById('langToggle');
+    var toggle = document.getElementById('langToggle');
     if (!toggle) return;
 
-    let currentLang = localStorage.getItem('vs_lang') || 'ru';
+    var langs = ['ru', 'en', 'ro'];
+    var langLabels = { ru: 'EN', en: 'RO', ro: 'RU' };
+    var currentLang = localStorage.getItem('vs_lang') || 'ru';
+    if (langs.indexOf(currentLang) === -1) currentLang = 'ru';
 
     function applyLang(lang) {
         currentLang = lang;
         localStorage.setItem('vs_lang', lang);
-        document.documentElement.lang = lang === 'en' ? 'en' : 'ru';
-        toggle.textContent = lang === 'en' ? 'RU' : 'EN';
+        document.documentElement.lang = lang;
+        toggle.textContent = langLabels[lang];
 
-        document.querySelectorAll('[data-en]').forEach(el => {
+        document.querySelectorAll('[data-en]').forEach(function(el) {
             if (!el.dataset.ru) el.dataset.ru = el.innerHTML;
-            el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.ru;
+            if (lang === 'en') el.innerHTML = el.dataset.en;
+            else if (lang === 'ro') el.innerHTML = el.dataset.ro || el.dataset.ru;
+            else el.innerHTML = el.dataset.ru;
         });
 
-        document.querySelectorAll('[data-en-ph]').forEach(el => {
+        document.querySelectorAll('[data-en-ph]').forEach(function(el) {
             if (!el.dataset.ruPh) el.dataset.ruPh = el.placeholder;
-            el.placeholder = lang === 'en' ? el.dataset.enPh : el.dataset.ruPh;
+            if (lang === 'en') el.placeholder = el.dataset.enPh;
+            else if (lang === 'ro') el.placeholder = el.dataset.roPh || el.dataset.ruPh;
+            else el.placeholder = el.dataset.ruPh;
         });
     }
 
-    toggle.addEventListener('click', () => {
-        applyLang(currentLang === 'ru' ? 'en' : 'ru');
+    toggle.addEventListener('click', function() {
+        var idx = langs.indexOf(currentLang);
+        applyLang(langs[(idx + 1) % langs.length]);
     });
 
-    if (currentLang === 'en') applyLang('en');
+    if (currentLang !== 'ru') applyLang(currentLang);
 })();
 
 // ===== Dynamic Copyright Year =====
