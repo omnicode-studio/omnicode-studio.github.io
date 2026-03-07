@@ -87,8 +87,8 @@ document.querySelectorAll('.faq__q').forEach(btn => {
     // 2. Скопировать токен сюда в BOT_TOKEN
     // 3. Написать боту /start, затем открыть https://api.telegram.org/bot<TOKEN>/getUpdates
     // 4. Найти chat_id из ответа и вставить в CHAT_ID
-    const BOT_TOKEN = '';
-    const CHAT_ID = '';
+    const BOT_TOKEN = '8631897124:AAH4-C90jNUbRv5dNXdsdQqIv_9OaP_t9cE';
+    const CHAT_ID = '7269255846';
 
     function sendToTelegram(form, data) {
         const btn = form.querySelector('button[type="submit"]');
