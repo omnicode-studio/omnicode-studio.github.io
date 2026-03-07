@@ -76,13 +76,16 @@
     burger.addEventListener('click', () => {
         burger.classList.toggle('active');
         navLinks.classList.toggle('active');
-        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        var isOpen = navLinks.classList.contains('active');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+        document.body.classList.toggle('menu-open', isOpen);
     });
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             burger.classList.remove('active');
             navLinks.classList.remove('active');
             document.body.style.overflow = '';
+            document.body.classList.remove('menu-open');
         });
     });
 })();

@@ -370,20 +370,23 @@ section{padding:100px 0}
 }
 
 @media(max-width:768px){
-    .nav__links{position:fixed;top:0;left:0;right:0;bottom:0;background:#0a0a0f;flex-direction:column;justify-content:center;align-items:center;gap:32px;opacity:0;pointer-events:none;transition:opacity .3s ease;z-index:200;list-style:none;padding:0;margin:0}
-    .nav__links.active{opacity:1;pointer-events:all}
+    .nav__links{display:none !important;position:fixed;inset:0;width:100vw;height:100vh;background:#0a0a0f;flex-direction:column;justify-content:center;align-items:center;gap:32px;z-index:9999;list-style:none;padding:0;margin:0}
+    .nav__links.active{display:flex !important}
     .nav__links li{list-style:none}
-    .nav__links a{font-size:24px;font-weight:500;color:var(--text-muted)}
+    .nav__links a{font-size:24px;font-weight:500;color:rgba(255,255,255,.8)}
     .nav__links a::after{display:none}
     .nav__links .nav__cta{font-size:18px;padding:16px 48px;margin-top:16px;border-radius:var(--radius-sm);background:var(--accent);color:#fff;display:inline-block}
-    .nav__burger{display:flex;z-index:201}
+    .nav__burger{display:flex;z-index:10000}
     .nav__burger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
     .nav__burger.active span:nth-child(2){opacity:0}
     .nav__burger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 
     /* Hide dropdown & lang when mobile menu is open */
-    .currency-dropdown,.nav__lang{z-index:201}
+    .currency-dropdown,.nav__lang{z-index:10000}
     .nav__links.active ~ .currency-dropdown,.nav__links.active ~ .nav__lang{display:none !important}
+
+    /* Hide sticky CTA & back-to-top when menu is open */
+    body.menu-open .sticky-cta,body.menu-open .back-to-top{display:none !important}
 
     .hero{min-height:auto;padding:140px 0 80px}
     .hero__name{font-size:clamp(32px,8vw,48px)}
