@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Shiman — Fullstack Web Developer | OmniCode Studio</title>
+    <meta name="description" content="Victor Shiman — fullstack web-разработчик. Сайты под ключ, веб-приложения, системы онлайн-заказов, Telegram-боты. Node.js, Express, JavaScript.">
+    <meta name="author" content="Victor Shiman">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Victor Shiman — Fullstack Web Developer">
+    <meta property="og:description" content="Сайты, веб-приложения и автоматизация под ключ.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Victor Shiman — Fullstack Web Developer">
+    <meta name="twitter:description" content="Сайты, веб-приложения и автоматизация под ключ.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Victor Shiman",
+        "alternateName": "OmniCode Studio",
+        "jobTitle": "Fullstack Web Developer",
+        "sameAs": [
+            "https://www.fiverr.com/omnicode_studio",
+            "https://github.com/AgentEchoVi",
+            "https://t.me/agentecho",
+            "https://kwork.ru/user/agentecho"
+        ],
+        "knowsAbout": ["Node.js", "Express", "JavaScript", "SQLite", "EJS", "HTML", "CSS", "REST API", "Telegram Bot API"]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader__circle">V.S</div>
+        <div class="loader__bar"><div class="loader__fill"></div></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Nav -->
+    <nav class="nav" id="nav">
+        <div class="container nav__inner">
+            <a href="#hero" class="nav__logo">
+                <div class="nav__logo-circle">V.S</div>
+                <span class="nav__logo-name">victor shiman</span>
+            </a>
+            <ul class="nav__links" id="navLinks">
+                <li><a href="#about" data-en="About">Обо мне</a></li>
+                <li><a href="#services" data-en="Services">Услуги</a></li>
+                <li><a href="#portfolio" data-en="Works">Работы</a></li>
+                <li><a href="#process" data-en="Process">Процесс</a></li>
+                <li><a href="#reviews" data-en="Reviews">Отзывы</a></li>
+                <li><a href="#contact" class="nav__cta magnetic-btn" data-en="Contact">Связаться</a></li>
+            </ul>
+            <div class="currency-dropdown" id="currencyDropdown">
+                <button class="currency-dropdown__toggle" id="currencyToggle">
+                    <span class="currency-dropdown__flag">🇲🇩</span>
+                    <span class="currency-dropdown__label">MDL</span>
+                    <svg class="currency-dropdown__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="currency-dropdown__menu">
+                    <button class="currency-dropdown__item" data-zone="md"><span>🇲🇩</span><span>MDL</span></button>
+                    <button class="currency-dropdown__item" data-zone="cis"><span>🇷🇺</span><span>RUB</span></button>
+                    <button class="currency-dropdown__item" data-zone="eur"><span>🇪🇺</span><span>EUR</span></button>
+                    <button class="currency-dropdown__item" data-zone="usd"><span>🇺🇸</span><span>USD</span></button>
+                </div>
+            </div>
+            <button class="nav__lang" id="langToggle">EN</button>
+            <button class="nav__burger" id="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero__bg">
+            <div class="hero__gradient"></div>
+            <div class="hero__grid"></div>
+            <div class="hero__glow hero__glow--1" data-parallax="0.03"></div>
+            <div class="hero__glow hero__glow--2" data-parallax="-0.02"></div>
+            <div class="hero__glow hero__glow--3" data-parallax="0.04"></div>
+            <canvas class="hero__particles" id="heroParticles"></canvas>
+        </div>
+        <div class="container hero__content">
+            <div class="hero__badge">
+                <span class="hero__badge-dot"></span>
+                <span data-en="Open for orders">Открыт для заказов</span>
+            </div>
+            <h1 class="hero__title">
+                <span class="hero__greeting" data-en="Hi, I'm">Привет, я</span>
+                <span class="hero__name text-reveal">Victor Shiman</span>
+            </h1>
+            <p class="hero__role" id="typewriter"></p>
+            <p class="hero__desc" data-en="I build websites and web applications that deliver results. Online ordering systems, admin panels, responsive design — all turnkey.">
+                Создаю веб-сайты и приложения, которые работают на результат.
+                Системы онлайн-заказов, панели управления, адаптивный дизайн — всё под ключ.
+            </p>
+            <div class="hero__actions">
+                <a href="#contact" class="btn btn--primary magnetic-btn">
+                    <span data-en="Discuss project">Обсудить проект</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#portfolio" class="btn btn--outline magnetic-btn" data-en="View works">Смотреть работы</a>
+            </div>
+            <div class="hero__stats">
+                <div class="hero__stat">
+                    <span class="hero__stat-num" data-count="5">0</span>
+                    <span class="hero__stat-label" data-en="Projects in production">Проектов в продакшене</span>
+                </div>
+                <div class="hero__stat">
+                    <span class="hero__stat-num">3</span>
+                    <span class="hero__stat-label" data-en="Tech stacks">Стека технологий</span>
+                </div>
+                <div class="hero__stat">
+                    <span class="hero__stat-num">&lt;2ч</span>
+                    <span class="hero__stat-label" data-en="Response time">Время ответа</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span>scroll</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-bar__track">
+            <div class="trust-bar__content">
+                <span data-en="Clean code">Чистый код</span><span class="trust-bar__dot"></span>
+                <span data-en="On time">Точно в срок</span><span class="trust-bar__dot"></span>
+                <span data-en="Post-launch support">Поддержка после сдачи</span><span class="trust-bar__dot"></span>
+                <span data-en="5 projects in production">5 проектов в продакшене</span><span class="trust-bar__dot"></span>
+                <span data-en="14 days free support">14 дней бесплатной поддержки</span><span class="trust-bar__dot"></span>
+                <span data-en="Responsive for all devices">Адаптив для всех устройств</span><span class="trust-bar__dot"></span>
+                <span data-en="SEO optimization">SEO оптимизация</span><span class="trust-bar__dot"></span>
+                <span data-en="Hosting deployment">Деплой на хостинг</span><span class="trust-bar__dot"></span>
+            </div>
+            <div class="trust-bar__content" aria-hidden="true">
+                <span data-en="Clean code">Чистый код</span><span class="trust-bar__dot"></span>
+                <span data-en="On time">Точно в срок</span><span class="trust-bar__dot"></span>
+                <span data-en="Post-launch support">Поддержка после сдачи</span><span class="trust-bar__dot"></span>
+                <span data-en="5 projects in production">5 проектов в продакшене</span><span class="trust-bar__dot"></span>
+                <span data-en="14 days free support">14 дней бесплатной поддержки</span><span class="trust-bar__dot"></span>
+                <span data-en="Responsive for all devices">Адаптив для всех устройств</span><span class="trust-bar__dot"></span>
+                <span data-en="SEO optimization">SEO оптимизация</span><span class="trust-bar__dot"></span>
+                <span data-en="Hosting deployment">Деплой на хостинг</span><span class="trust-bar__dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag">01</span>
+                <h2 class="section-title text-reveal" data-en="About me">Обо мне</h2>
+            </div>
+            <div class="about__grid">
+                <div class="about__text" data-aos>
+                    <p data-en="I'm a fullstack web developer from Moldova. I specialize in building functional websites and web apps from scratch: business sites, restaurant ordering systems, admin panels, and mobile apps.">Я — fullstack веб-разработчик из Молдовы. Специализируюсь на создании функциональных сайтов и веб-приложений с нуля: от бизнес-сайтов и ресторанных систем до админ-панелей и мобильных приложений.</p>
+                    <p data-en="My stack: Node.js, Express, EJS, SQLite, JavaScript, HTML/CSS. Every project includes responsive design, multilingual support, SEO, and real deployment.">Мой стек — Node.js, Express, EJS, SQLite, JavaScript, HTML/CSS. Каждый проект делаю с адаптивным дизайном, двуязычностью, SEO и реальным деплоем на хостинг.</p>
+                    <p data-en="I work transparently: show intermediate results, coordinate at every stage, and don't disappear after delivery. All projects in this portfolio are live and in production.">Работаю прозрачно: показываю промежуточные результаты, согласовываю каждый этап и не исчезаю после сдачи. Все проекты в портфолио — живые, работают в продакшене.</p>
+                </div>
+                <div class="about__stack" data-aos>
+                    <h3 class="about__stack-title" data-en="Technologies">Технологии</h3>
+                    <div class="about__tags">
+                        <span class="tag tag--primary">Node.js</span>
+                        <span class="tag tag--primary">Express</span>
+                        <span class="tag tag--primary">JavaScript</span>
+                        <span class="tag tag--secondary">EJS</span>
+                        <span class="tag tag--secondary">SQLite</span>
+                        <span class="tag tag--secondary">HTML / CSS</span>
+                        <span class="tag tag--secondary">REST API</span>
+                        <span class="tag tag--accent">Git / GitHub</span>
+                        <span class="tag tag--accent">Capacitor</span>
+                        <span class="tag tag--accent">PWA</span>
+                        <span class="tag tag--accent">SSE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag">02</span>
+                <h2 class="section-title text-reveal" data-en="Services">Услуги</h2>
+            </div>
+            <div class="services__grid">
+                <div class="service-card tilt-card" data-aos>
+                    <div class="service-card__glow"></div>
+                    <div class="service-card__inner">
+                        <div class="service-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        </div>
+                        <h3 data-en="Turnkey websites">Сайты под ключ</h3>
+                        <p data-en="Multi-page websites with admin panel, database, multilingual support, and SEO.">Многостраничные сайты с админ-панелью, базой данных, мультиязычностью и SEO.</p>
+                        <div class="service-card__price" data-price-rub="от 5 000 ₽" data-price-mdl="de la 1 000 lei" data-price-eur="from €80" data-price-usd="from $80">от 5 000 ₽</div>
+                        <div class="service-card__tags"><span>Node.js</span><span>Express</span><span>SQLite</span></div>
+                        <a href="services.html#websites" class="service-card__link" data-en="Details & pricing →">Подробнее и тарифы →</a>
+                    </div>
+                </div>
+                <div class="service-card tilt-card" data-aos>
+                    <div class="service-card__glow"></div>
+                    <div class="service-card__inner">
+                        <div class="service-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                        </div>
+                        <h3 data-en="Ordering systems">Системы заказов</h3>
+                        <p data-en="Online menu, cart, order processing, staff panel with real-time SSE, mobile app.">Онлайн-меню, корзина, оформление заказов, staff-панель с real-time SSE, мобильное приложение.</p>
+                        <div class="service-card__price" data-price-rub="от 8 000 ₽" data-price-mdl="de la 1 600 lei" data-price-eur="from €130" data-price-usd="from $130">от 8 000 ₽</div>
+                        <div class="service-card__tags"><span>SSE</span><span>REST API</span><span>Capacitor</span></div>
+                        <a href="services.html#ordering" class="service-card__link" data-en="Details & pricing →">Подробнее и тарифы →</a>
+                    </div>
+                </div>
+                <div class="service-card tilt-card" data-aos>
+                    <div class="service-card__glow"></div>
+                    <div class="service-card__inner">
+                        <div class="service-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+                        </div>
+                        <h3 data-en="Landing pages">Лендинги</h3>
+                        <p data-en="High-converting landing pages with animations, forms, responsive design, and analytics.">Продающие одностраничники с анимациями, формами, адаптивом и аналитикой.</p>
+                        <div class="service-card__price" data-price-rub="от 3 000 ₽" data-price-mdl="de la 600 lei" data-price-eur="from €50" data-price-usd="from $50">от 3 000 ₽</div>
+                        <div class="service-card__tags"><span>HTML/CSS</span><span>JS</span><span data-en="Responsive">Адаптив</span></div>
+                        <a href="services.html#landings" class="service-card__link" data-en="Details & pricing →">Подробнее и тарифы →</a>
+                    </div>
+                </div>
+                <div class="service-card tilt-card" data-aos>
+                    <div class="service-card__glow"></div>
+                    <div class="service-card__inner">
+                        <div class="service-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+                        </div>
+                        <h3 data-en="Bots & automation">Боты и автоматизация</h3>
+                        <p data-en="Telegram bots, web scrapers, automation scripts, API integrations.">Telegram-боты, парсеры, скрипты автоматизации, интеграции с API.</p>
+                        <div class="service-card__price" data-price-rub="от 3 000 ₽" data-price-mdl="de la 600 lei" data-price-eur="from €50" data-price-usd="from $50">от 3 000 ₽</div>
+                        <div class="service-card__tags"><span>Node.js</span><span>Telegram API</span><span>Python</span></div>
+                        <a href="services.html#bots" class="service-card__link" data-en="Details & pricing →">Подробнее и тарифы →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Case Studies -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag">03</span>
+                <h2 class="section-title text-reveal" data-en="Works">Работы</h2>
+                <p class="section-desc" data-en="Real projects in production — you can open and explore each one">Реальные проекты в продакшене — каждый можно открыть и потрогать</p>
+            </div>
+
+            <!-- Case Study: Renome -->
+            <div class="case-study" data-aos>
+                <div class="case-study__preview tilt-card">
+                    <div class="case-study__glow"></div>
+                    <div class="case-study__browser">
+                        <div class="browser__dots"><span></span><span></span><span></span></div>
+                        <span class="browser__url">renome.onrender.com</span>
+                    </div>
+                    <div class="case-study__screenshot">
+                        <img src="https://image.thum.io/get/width/800/crop/600/https://renome.onrender.com" alt="Renome — сайт ресторана" loading="lazy">
+                    </div>
+                    <a href="https://renome.onrender.com" target="_blank" class="case-study__overlay">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        <span>Открыть сайт</span>
+                    </a>
+                </div>
+                <div class="case-study__info">
+                    <span class="case-study__label" data-en="Case #1 — Restaurant / Online orders">Кейс #1 — Ресторан / Онлайн-заказы</span>
+                    <h3 data-en="Renome — Italian café">Renome — итальянское кафе</h3>
+                    <div class="case-study__task">
+                        <h4 data-en="Task">Задача</h4>
+                        <p data-en="The restaurant needed a website with a full online ordering cycle: menu catalog, cart, checkout, staff panel with live updates, mobile app for customers.">Ресторану нужен сайт с полным циклом онлайн-заказов: каталог блюд, корзина, оформление, панель для персонала с живыми обновлениями, мобильное приложение для клиентов.</p>
+                    </div>
+                    <div class="case-study__done">
+                        <h4 data-en="Delivered">Что сделано</h4>
+                        <ul>
+                            <li data-en="120+ dishes catalog in 10 categories with photos">Каталог 120+ блюд в 10 категориях с фото</li>
+                            <li data-en="Cart + checkout with delivery/pickup, delivery fee system">Корзина + оформление заказов с доставкой/самовывозом, система тарифов доставки</li>
+                            <li data-en="Staff panel with SSE (real-time order updates)">Staff-панель с SSE (заказы приходят в реальном времени)</li>
+                            <li data-en="Admin panel: menu, orders, users">Админ-панель: меню, заказы, пользователи</li>
+                            <li data-en="Android app via Capacitor">Android-приложение через Capacitor</li>
+                            <li data-en="Bilingual RO / RU">Двуязычность RO / RU</li>
+                        </ul>
+                    </div>
+                    <div class="case-study__results">
+                        <div class="case-study__metric">
+                            <span class="case-study__metric-num" data-count="120">0</span>
+                            <span class="case-study__metric-label" data-en="dishes in catalog">блюд в каталоге</span>
+                        </div>
+                        <div class="case-study__metric">
+                            <span class="case-study__metric-num" data-count="10">0</span>
+                            <span class="case-study__metric-label" data-en="categories">категорий</span>
+                        </div>
+                        <div class="case-study__metric">
+                            <span class="case-study__metric-num">2</span>
+                            <span class="case-study__metric-label" data-en="languages">языка</span>
+                        </div>
+                    </div>
+                    <div class="case-study__tech">
+                        <span>Node.js</span><span>Express</span><span>EJS</span><span>SQLite</span><span>SSE</span><span>Capacitor</span>
+                    </div>
+                    <a href="https://github.com/AgentEchoVi/renome" target="_blank" class="case-study__github">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <span data-en="Source code">Исходный код</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Case Study: Drive Pub -->
+            <div class="case-study case-study--reverse" data-aos>
+                <div class="case-study__preview tilt-card">
+                    <div class="case-study__glow"></div>
+                    <div class="case-study__browser">
+                        <div class="browser__dots"><span></span><span></span><span></span></div>
+                        <span class="browser__url">drive-pub.onrender.com</span>
+                    </div>
+                    <div class="case-study__screenshot">
+                        <img src="https://image.thum.io/get/width/800/crop/600/https://drive-pub.onrender.com" alt="Drive Pub — сайт ресторана" loading="lazy">
+                    </div>
+                    <a href="https://drive-pub.onrender.com" target="_blank" class="case-study__overlay">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        <span>Открыть сайт</span>
+                    </a>
+                </div>
+                <div class="case-study__info">
+                    <span class="case-study__label" data-en="Case #2 — Restaurant / Pub">Кейс #2 — Ресторан / Паб</span>
+                    <h3 data-en="Drive Pub — restaurant & pub">Drive Pub — ресторан и паб</h3>
+                    <div class="case-study__task">
+                        <h4 data-en="Task">Задача</h4>
+                        <p data-en="Build a pub website with a large menu, ordering system, user registration, and convenient admin panel for the owner.">Создать сайт для паба с большим меню, системой заказов, регистрацией пользователей и удобной админкой для владельца.</p>
+                    </div>
+                    <div class="case-study__done">
+                        <h4 data-en="Delivered">Что сделано</h4>
+                        <ul>
+                            <li data-en="192 dishes catalog in 15 categories">Каталог 192 блюда в 15 категориях</li>
+                            <li data-en="Online ordering with cart">Онлайн-заказы с корзиной</li>
+                            <li data-en="User registration & personal account">Регистрация и личный кабинет</li>
+                            <li data-en="Admin panel with menu management">Админ-панель с управлением меню</li>
+                            <li data-en="Bilingual RO / RU">Двуязычность RO / RU</li>
+                            <li data-en="Auto image compression (sharp)">Автосжатие изображений (sharp)</li>
+                        </ul>
+                    </div>
+                    <div class="case-study__results">
+                        <div class="case-study__metric">
+                            <span class="case-study__metric-num" data-count="192">0</span>
+                            <span class="case-study__metric-label" data-en="dishes in menu">блюд в меню</span>
+                        </div>
+                        <div class="case-study__metric">
+                            <span class="case-study__metric-num" data-count="15">0</span>
+                            <span class="case-study__metric-label" data-en="categories">категорий</span>
+                        </div>
+                        <div class="case-study__metric">
+                            <span class="case-study__metric-num">24/7</span>
+                            <span class="case-study__metric-label" data-en="uptime">аптайм</span>
+                        </div>
+                    </div>
+                    <div class="case-study__tech">
+                        <span>Node.js</span><span>Express</span><span>EJS</span><span>SQLite</span><span>sharp</span>
+                    </div>
+                    <a href="https://github.com/AgentEchoVi/drive-pub" target="_blank" class="case-study__github">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <span data-en="Source code">Исходный код</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Case Study: Clemantin -->
+            <div class="case-study" data-aos>
+                <div class="case-study__preview tilt-card">
+                    <div class="case-study__glow"></div>
+                    <div class="case-study__browser">
+                        <div class="browser__dots"><span></span><span></span><span></span></div>
+                        <span class="browser__url">clemantin.md</span>
+                    </div>
+                    <div class="case-study__screenshot case-study__screenshot--placeholder">
+                        <div class="screenshot-placeholder">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                            <span>Скоро в продакшене</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-study__info">
+                    <span class="case-study__label" data-en="Case #3 — Construction company">Кейс #3 — Строительная компания</span>
+                    <h3 data-en="Clemantin — construction">Clemantin — строительство</h3>
+                    <div class="case-study__task">
+                        <h4 data-en="Task">Задача</h4>
+                        <p data-en="Corporate website for a construction company focused on SEO, PWA mode, cost calculator, and project portfolio.">Корпоративный сайт для строительной компании с упором на SEO, PWA-режим, калькулятор стоимости работ и портфолио проектов.</p>
+                    </div>
+                    <div class="case-study__done">
+                        <h4 data-en="Delivered">Что сделано</h4>
+                        <ul>
+                            <li data-en="870+ lines of custom CSS animations">870+ строк кастомных CSS-анимаций</li>
+                            <li data-en="PWA — works offline, add to home screen">PWA — работает офлайн, иконка на рабочий стол</li>
+                            <li data-en="SEO: JSON-LD, meta, breadcrumbs, sitemap">SEO: JSON-LD, meta, breadcrumbs, sitemap</li>
+                            <li data-en="Construction cost calculator">Калькулятор стоимости строительства</li>
+                            <li data-en="Portfolio with house projects">Портфолио с проектами домов</li>
+                            <li data-en="Bilingual RO / RU">Двуязычность RO / RU</li>
+                        </ul>
+                    </div>
+                    <div class="case-study__results">
+                        <div class="case-study__metric">
+                            <span class="case-study__metric-num">870+</span>
+                            <span class="case-study__metric-label" data-en="lines of animations">строк анимаций</span>
+                        </div>
+                        <div class="case-study__metric">
+                            <span class="case-study__metric-num">PWA</span>
+                            <span class="case-study__metric-label" data-en="offline mode">офлайн-режим</span>
+                        </div>
+                        <div class="case-study__metric">
+                            <span class="case-study__metric-num">SEO</span>
+                            <span class="case-study__metric-label" data-en="JSON-LD">JSON-LD</span>
+                        </div>
+                    </div>
+                    <div class="case-study__tech">
+                        <span>Node.js</span><span>EJS</span><span>PWA</span><span>SEO</span><span>JSON-LD</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mini Cards: Bot + Parser -->
+            <div class="portfolio__mini-grid">
+                <article class="mini-card tilt-card" data-aos>
+                    <div class="mini-card__glow"></div>
+                    <div class="mini-card__inner">
+                        <div class="mini-card__preview">
+                            <div class="mini-card__chat">
+                                <div class="chat__msg chat__msg--bot"><span class="chat__ava">B</span><div class="chat__bubble">Новая заявка с сайта!</div></div>
+                                <div class="chat__msg chat__msg--user"><div class="chat__bubble">Отлично, перезвоню</div><span class="chat__ava">V</span></div>
+                            </div>
+                        </div>
+                        <div class="mini-card__info">
+                            <span class="mini-card__type" data-en="Automation">Автоматизация</span>
+                            <h3 data-en="Telegram bot for leads">Telegram-бот для заявок</h3>
+                            <p data-en="Bot receives leads from the website, notifies the manager, and auto-replies to the client.">Бот принимает заявки с сайта, уведомляет менеджера и автоматически отвечает клиенту.</p>
+                            <div class="mini-card__tech"><span>Node.js</span><span>Telegram API</span><span>Webhook</span></div>
+                        </div>
+                    </div>
+                </article>
+                <article class="mini-card tilt-card" data-aos>
+                    <div class="mini-card__glow"></div>
+                    <div class="mini-card__inner">
+                        <div class="mini-card__preview">
+                            <div class="mini-card__code">
+                                <span class="code__line"><span class="code__kw">async function</span> <span class="code__fn">parse</span>(url) {</span>
+                                <span class="code__line">  <span class="code__kw">const</span> data = <span class="code__kw">await</span> <span class="code__fn">fetch</span>(url);</span>
+                                <span class="code__line">  <span class="code__kw">return</span> <span class="code__fn">saveToDB</span>(data);</span>
+                                <span class="code__line">}</span>
+                            </div>
+                        </div>
+                        <div class="mini-card__info">
+                            <span class="mini-card__type" data-en="Script / Scraper">Скрипт / Парсер</span>
+                            <h3 data-en="Web scraper & automation">Парсер и автоматизация</h3>
+                            <p data-en="Data scraping scripts, API integrations, routine process automation.">Скрипты для сбора данных, интеграции с API, автоматизация рутинных процессов.</p>
+                            <div class="mini-card__tech"><span>JavaScript</span><span>Python</span><span>API</span></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag">04</span>
+                <h2 class="section-title text-reveal" data-en="Process">Процесс</h2>
+            </div>
+            <div class="process__steps">
+                <div class="process__step" data-aos>
+                    <div class="process__num">01</div>
+                    <div class="process__body">
+                        <h3 data-en="Discussion">Обсуждение</h3>
+                        <p data-en="You describe the task, I ask questions and suggest a solution. Usually takes 15 minutes.">Вы описываете задачу, я задаю вопросы и предлагаю решение. Обычно хватает 15 минут.</p>
+                    </div>
+                </div>
+                <div class="process__step" data-aos>
+                    <div class="process__num">02</div>
+                    <div class="process__body">
+                        <h3 data-en="Spec & estimate">ТЗ и оценка</h3>
+                        <p data-en="I prepare a spec with scope, timeline, and cost. You know exactly what you'll get.">Формирую ТЗ с описанием объёма, сроков и стоимости. Вы точно знаете, что получите.</p>
+                    </div>
+                </div>
+                <div class="process__step" data-aos>
+                    <div class="process__num">03</div>
+                    <div class="process__body">
+                        <h3 data-en="Development">Разработка</h3>
+                        <p data-en="I work in stages, showing intermediate results. Revisions at each stage are free.">Работаю поэтапно, показываю промежуточные результаты. Правки на каждом этапе бесплатно.</p>
+                    </div>
+                </div>
+                <div class="process__step" data-aos>
+                    <div class="process__num">04</div>
+                    <div class="process__body">
+                        <h3 data-en="Delivery & support">Сдача и поддержка</h3>
+                        <p data-en="I hand over files, deploy to hosting, provide instructions. 14 days of free support.">Передаю файлы, деплою на хостинг, даю инструкцию. 14 дней бесплатной поддержки.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="guarantee" data-aos>
+        <div class="container">
+            <div class="guarantee__card">
+                <div class="guarantee__icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                </div>
+                <h2 class="guarantee__title text-reveal" data-en="Result guarantee">Гарантия результата</h2>
+                <p class="guarantee__desc" data-en="14 days of free support after project delivery. If you're not satisfied — I'll revise for free until it fully matches the spec.">14 дней бесплатной поддержки после сдачи проекта. Если результат не устроит — доработаю бесплатно до полного соответствия ТЗ.</p>
+                <div class="guarantee__features">
+                    <div class="guarantee__feature">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span data-en="Free revisions until approval">Бесплатные правки до утверждения</span>
+                    </div>
+                    <div class="guarantee__feature">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span data-en="14 days of support">14 дней поддержки</span>
+                    </div>
+                    <div class="guarantee__feature">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span data-en="Source code is yours forever">Исходный код — ваш навсегда</span>
+                    </div>
+                    <div class="guarantee__feature">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span data-en="Hosting deployment included">Деплой и настройка хостинга включены</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency -->
+    <div class="urgency" data-aos>
+        <div class="container">
+            <div class="urgency__inner">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span class="urgency__text" data-en="I can take on <strong>2</strong> more projects this month">В этом месяце могу взять ещё <strong>2</strong> проекта</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag">05</span>
+                <h2 class="section-title text-reveal" data-en="Reviews">Отзывы</h2>
+            </div>
+            <div class="reviews__grid">
+                <div class="review-card tilt-card" data-aos>
+                    <div class="review-card__glow"></div>
+                    <div class="review-card__inner">
+                        <div class="review-card__stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="review-card__text" data-en="&quot;Built our company website faster than promised. Clean work, perfect responsive design, set up hosting himself. Recommend!&quot;">"Сделал сайт для нашей компании быстрее, чем обещал. Всё аккуратно, адаптив идеальный, сам настроил хостинг. Рекомендую!"</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">А</div>
+                            <div><span class="review-card__name">Aleksandr M.</span><span class="review-card__role" data-en="Business owner">Владелец бизнеса</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card tilt-card" data-aos>
+                    <div class="review-card__glow"></div>
+                    <div class="review-card__inner">
+                        <div class="review-card__stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="review-card__text" data-en="&quot;Ordered a Telegram bot for lead automation. Works flawlessly for 3 months now. Responsive, quickly made revisions.&quot;">"Заказывал Telegram-бота для автоматизации заявок. Работает без сбоев уже 3 месяца. На связи, оперативно вносил правки."</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">Д</div>
+                            <div><span class="review-card__name">Dmitry K.</span><span class="review-card__role" data-en="Project manager">Менеджер проекта</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card tilt-card" data-aos>
+                    <div class="review-card__glow"></div>
+                    <div class="review-card__inner">
+                        <div class="review-card__stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="review-card__text" data-en="&quot;Needed a landing page in 2 days — delivered in 1. Modern design, forms work great, conversion doubled.&quot;">"Нужен был лендинг за 2 дня — сделал за 1. Дизайн современный, формы работают, конверсия выросла в 2 раза."</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">М</div>
+                            <div><span class="review-card__name">Maria L.</span><span class="review-card__role" data-en="Marketer">Маркетолог</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag">06</span>
+                <h2 class="section-title text-reveal" data-en="FAQ">Вопросы</h2>
+            </div>
+            <div class="faq__list">
+                <div class="faq__item" data-aos>
+                    <button class="faq__q"><span data-en="How much does a website cost?">Сколько стоит сделать сайт?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <div class="faq__a"><p data-en="Landing page — from $50, multi-page site — from $80, with ordering system — from $130. I'll give an exact price after discussion." data-text-rub="Лендинг — от 3 000 ₽, многостраничный сайт — от 5 000 ₽, с системой заказов — от 8 000 ₽. Точную цену назову после обсуждения." data-text-mdl="Landing — de la 600 lei, site multi-pagină — de la 1 000 lei, cu sistem de comenzi — de la 1 600 lei." data-text-eur="Landing page — from €50, multi-page site — from €80, with ordering system — from €130. I'll give an exact price after discussion." data-text-usd="Landing page — from $50, multi-page site — from $80, with ordering system — from $130. I'll give an exact price after discussion.">Лендинг — от 3 000 ₽, многостраничный сайт — от 5 000 ₽, с системой заказов — от 8 000 ₽. Точную цену назову после обсуждения.</p></div>
+                </div>
+                <div class="faq__item" data-aos>
+                    <button class="faq__q"><span data-en="What are the timelines?">Какие сроки?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <div class="faq__a"><p data-en="Landing page — 1–3 days. Multi-page site — 3–7 days. With ordering system — 5–14 days. Bot — 1–4 days.">Лендинг — 1–3 дня. Многостраничный сайт — 3–7 дней. С системой заказов — 5–14 дней. Бот — 1–4 дня.</p></div>
+                </div>
+                <div class="faq__item" data-aos>
+                    <button class="faq__q"><span data-en="Are there revisions after delivery?">Будут ли правки после сдачи?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <div class="faq__a"><p data-en="14 days of free support. Minor edits — free. Major additions — by agreement.">14 дней бесплатной поддержки. Мелкие правки — бесплатно. Крупные доработки — по договорённости.</p></div>
+                </div>
+                <div class="faq__item" data-aos>
+                    <button class="faq__q"><span data-en="How does payment work?">Как происходит оплата?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <div class="faq__a"><p data-en="Via Fiverr or Kwork (secure transaction) or directly. 50% upfront, the rest after acceptance." data-text-rub="Через Fiverr или Kwork (безопасная сделка) или напрямую. Предоплата 50%, остаток после приёмки." data-text-mdl="Prin Fiverr sau Kwork (tranzacție sigură) sau direct. Avans 50%, restul după recepție." data-text-eur="Via Fiverr, Kwork (secure transaction), or directly. 50% upfront, the rest after acceptance." data-text-usd="Via Fiverr, Kwork (secure transaction), or directly. 50% upfront, the rest after acceptance.">Через Fiverr или Kwork (безопасная сделка) или напрямую. Предоплата 50%, остаток после приёмки.</p></div>
+                </div>
+                <div class="faq__item" data-aos>
+                    <button class="faq__q"><span data-en="Design or code only?">Дизайн или только код?</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+                    <div class="faq__a"><p data-en="Both options. I code from mockups (Figma, PSD) or design from scratch based on references.">Оба варианта. Верстаю по макету (Figma, PSD) или предложу дизайн сам на основе референсов.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <span class="section-tag">07</span>
+                <h2 class="section-title text-reveal" data-en="Contact">Связаться</h2>
+            </div>
+            <div class="contact__grid">
+                <div class="contact__info" data-aos>
+                    <p class="contact__desc" data-en="Describe your task — I'll estimate the scope and suggest a solution. Usually respond within a couple of hours.">Опишите задачу — я оценю объём и предложу решение. Обычно отвечаю в течение пары часов.</p>
+                    <div class="contact__links">
+                        <a href="https://www.fiverr.com/omnicode_studio" target="_blank" class="contact__link magnetic-btn">
+                            <div class="contact__link-icon contact__link-icon--fiverr">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.004 15.588a.995.995 0 1 0 .002-1.99.995.995 0 0 0-.002 1.99zm-.996-3.705h-.85c-.546 0-.846.388-.846.873v2.058h1.696v1.238h-1.696v4.323h-1.543v-4.323h-.908v-1.238h.908v-2.058c0-1.27.756-2.112 2.05-2.112h1.19v1.238zm-5.225-1.238h1.543v8.794h-1.543V10.645zm-2.12 5.62c0 1.16-.795 1.991-1.86 1.991-1.065 0-1.86-.83-1.86-1.99 0-1.16.795-1.991 1.86-1.991s1.86.83 1.86 1.99zm1.543 0c0-1.88-1.355-3.228-3.403-3.228-2.048 0-3.403 1.349-3.403 3.228 0 1.88 1.355 3.228 3.403 3.228 2.048 0 3.403-1.349 3.403-3.228z"/></svg>
+                            </div>
+                            <div><span class="contact__link-name">Fiverr</span><span class="contact__link-sub">@omnicode_studio</span></div>
+                            <svg class="contact__link-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+                        </a>
+                        <a href="https://kwork.ru/user/agentecho" target="_blank" class="contact__link magnetic-btn">
+                            <div class="contact__link-icon contact__link-icon--kwork">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                            </div>
+                            <div><span class="contact__link-name">Kwork</span><span class="contact__link-sub" data-en="Secure deal">Безопасная сделка</span></div>
+                            <svg class="contact__link-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+                        </a>
+                        <a href="https://t.me/agentecho" target="_blank" class="contact__link magnetic-btn">
+                            <div class="contact__link-icon contact__link-icon--tg">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                            </div>
+                            <div><span class="contact__link-name">Telegram</span><span class="contact__link-sub" data-en="Quick response">Отвечу быстро</span></div>
+                            <svg class="contact__link-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+                        </a>
+                        <div class="contact__link contact__link--soon">
+                            <div class="contact__link-icon contact__link-icon--upwork">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
+                            </div>
+                            <div><span class="contact__link-name">Upwork</span><span class="contact__link-sub" data-en="Coming soon">Скоро</span></div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact__form" id="contactForm" data-aos>
+                    <h3 class="contact__form-title" data-en="Submit a request">Оставить заявку</h3>
+                    <div class="form-group"><input type="text" name="name" placeholder="Ваше имя" data-en-ph="Your name" required></div>
+                    <div class="form-group"><input type="text" name="contact" placeholder="Telegram или Email" data-en-ph="Telegram or Email" required></div>
+                    <div class="form-group">
+                        <select name="service" data-en-options>
+                            <option value="" data-en="Project type">Тип проекта</option>
+                            <option value="site" data-en="Turnkey website">Сайт под ключ</option>
+                            <option value="orders" data-en="Ordering system">Система заказов</option>
+                            <option value="landing" data-en="Landing page">Лендинг</option>
+                            <option value="bot" data-en="Bot / automation">Бот / автоматизация</option>
+                            <option value="other" data-en="Other">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><textarea name="message" placeholder="Опишите задачу" data-en-ph="Describe your task" rows="4" required></textarea></div>
+                    <button type="submit" class="btn btn--primary btn--full magnetic-btn">
+                        <span data-en="Send request">Отправить заявку</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                    </button>
+                    <p class="contact__form-note" data-en="Usually respond within 2 hours">Обычно отвечаю в течение 2 часов</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <div class="footer__circle">V.S</div>
+                <span class="footer__name">victor shiman</span>
+            </div>
+            <p class="footer__copy" id="footerCopy" data-en="&copy; {year} Victor Shiman. All rights reserved.">&copy; <span id="copyrightYear">2025</span> Victor Shiman. Все права защищены.</p>
+            <div class="footer__links">
+                <a href="https://www.fiverr.com/omnicode_studio" target="_blank">Fiverr</a>
+                <a href="https://kwork.ru/user/agentecho" target="_blank">Kwork</a>
+                <a href="https://t.me/agentecho" target="_blank">Telegram</a>
+                <a href="https://github.com/AgentEchoVi" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <a href="#contact" class="sticky-cta__btn magnetic-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            <span data-en="Discuss project">Обсудить проект</span>
+        </a>
+    </div>
+
+    <!-- Exit Intent Popup -->
+    <div class="exit-popup" id="exitPopup">
+        <div class="exit-popup__backdrop"></div>
+        <div class="exit-popup__card">
+            <button class="exit-popup__close" id="exitPopupClose">&times;</button>
+            <div class="exit-popup__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </div>
+            <h3 data-en="Leaving already?">Уже уходите?</h3>
+            <p data-en="Submit a request — I'll contact you and evaluate your project for free in 15 minutes.">Оставьте заявку — я свяжусь с вами и бесплатно оценю ваш проект за 15 минут.</p>
+            <form class="exit-popup__form" id="exitForm">
+                <input type="text" name="name" placeholder="Ваше имя" data-en-ph="Your name" required>
+                <input type="text" name="contact" placeholder="Telegram или Email" data-en-ph="Telegram or Email" required>
+                <button type="submit" class="btn btn--primary btn--full" data-en="Get free estimate">Получить оценку бесплатно</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script src="shared.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
