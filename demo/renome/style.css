@@ -8754,40 +8754,68 @@ h1, h2, h3, h4, h5, h6 {
    DEMO-SPECIFIC ADDITIONS — overrides for portfolio/demo/renome/
    ============================================================ */
 
-/* Top demo banner */
+/* Top demo banner — pinned above tricolore + header.
+   Height var keeps tricolore/header offsets in sync. */
+:root {
+  --demo-banner-h: 32px;
+}
 .demo-banner {
-  position: relative;
-  background: #1C1C1C;
-  color: #E6E2D5;
-  font-size: 13px;
-  padding: 10px 16px;
-  text-align: center;
-  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--demo-banner-h);
+  z-index: 1002;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
-  flex-wrap: wrap;
+  padding: 0 16px;
+  background: #1C1C1C;
+  color: #E6E2D5;
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
   border-bottom: 1px solid rgba(184, 145, 74, 0.3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .demo-banner__back {
   color: var(--gold);
   font-weight: 500;
   text-decoration: none;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .demo-banner__back:hover {
   color: var(--gold-hover);
 }
 
-/* Anchor jump offset so #section IDs don't hide behind the fixed header */
-html {
-  scroll-padding-top: calc(var(--header-h, 72px) + 24px);
+/* Push tricolore + header below the fixed banner */
+.tricolore {
+  top: var(--demo-banner-h);
+}
+.header {
+  top: calc(var(--demo-banner-h) + 3px);
 }
 
-/* Page offset to clear fixed header on internal pages */
+/* Anchor jump offset accounts for banner + header */
+html {
+  scroll-padding-top: calc(var(--demo-banner-h) + var(--header-h, 72px) + 24px);
+}
+
+/* Mobile: smaller font + ellipsis to keep banner one line */
+@media (max-width: 600px) {
+  .demo-banner {
+    font-size: 11px;
+    gap: 10px;
+  }
+}
+
+/* Page offset to clear fixed banner + header on internal pages */
 .page-offset {
-  padding-top: calc(var(--header-h, 72px) + 36px);
+  padding-top: calc(var(--demo-banner-h) + var(--header-h, 72px) + 36px);
 }
 
 /* Menu search bar */
