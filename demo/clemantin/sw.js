@@ -1,7 +1,7 @@
 // Demo PWA service worker for /demo/clemantin/
 // All paths are RELATIVE so the SW works regardless of host (works under
 // /demo/clemantin/ on GitHub Pages, where scope is the SW directory).
-var CACHE_NAME = 'clemantin-demo-v1';
+var CACHE_NAME = 'clemantin-demo-v2';
 var APP_SHELL = [
   './',
   './index.html',

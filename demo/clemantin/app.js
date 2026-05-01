@@ -12,6 +12,34 @@
 'use strict';
 
 // ============================================================
+// SW HANDLING — runs FIRST so a stale install can self-clean
+// ============================================================
+
+// One-shot URL escape hatch: visit ?reset-sw=1 to nuke the old SW + caches
+// (used when an earlier broken cache is sticking around).
+if (location.search.indexOf('reset-sw=1') !== -1 && 'serviceWorker' in navigator) {
+  Promise.all([
+    navigator.serviceWorker.getRegistrations().then(function (regs) {
+      return Promise.all(regs.map(function (r) { return r.unregister(); }));
+    }),
+    'caches' in window
+      ? caches.keys().then(function (keys) { return Promise.all(keys.map(function (k) { return caches.delete(k); })); })
+      : Promise.resolve()
+  ]).then(function () {
+    location.replace(location.pathname);
+  });
+  return; // stop further bootstrap on this load
+}
+
+// On every visit, ask the existing registration to re-fetch sw.js so a
+// fresh server-side update doesn't have to wait the default 24h interval.
+if ('serviceWorker' in navigator && navigator.serviceWorker.getRegistration) {
+  navigator.serviceWorker.getRegistration().then(function (r) {
+    if (r) r.update();
+  }).catch(function () {});
+}
+
+// ============================================================
 // CONFIG
 // ============================================================
 
