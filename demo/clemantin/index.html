@@ -7,14 +7,14 @@
   <title>CLEMANTIN — строительство домов под ключ в Молдове (demo)</title>
   <meta name="description" content="Демонстрация сайта строительной компании CLEMANTIN. Сборка OmniCode Studio.">
   <link rel="canonical" href="https://omnicode-studio.github.io/demo/clemantin/">
-  <link rel="manifest" href="manifest.json?v=2">
+  <link rel="manifest" href="manifest.json?v=3">
   <link rel="icon" type="image/png" href="images/logo.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../_demo-frame.css?v=2">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="../_demo-frame.css?v=3">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -109,15 +109,15 @@
         </div>
       </div>
       <div class="hero-slider__nav">
-        <button class="hero-slider__arrow" data-slider-prev aria-label="Previous">‹</button>
-        <button class="hero-slider__arrow" data-slider-next aria-label="Next">›</button>
+        <button class="hero-slider__arrow hero-slider__arrow--prev" data-slider-prev aria-label="Previous">‹</button>
+        <button class="hero-slider__arrow hero-slider__arrow--next" data-slider-next aria-label="Next">›</button>
       </div>
       <div class="hero-slider__dots">
         <button class="hero-slider__dot active" data-slide="0"></button>
         <button class="hero-slider__dot" data-slide="1"></button>
         <button class="hero-slider__dot" data-slide="2"></button>
       </div>
-      <div class="hero-slider__progress"><div class="hero-slider__progress-bar"></div></div>
+      <div class="hero-slider__progress"><div class="hero-slider__progress-bar" id="heroProgressBar"></div></div>
     </section>
 
     <!-- Stats -->
@@ -132,32 +132,191 @@
       </div>
     </section>
 
-    <!-- Services teaser -->
-    <section class="home-services" id="services">
+    <!-- Trust ticker -->
+    <div class="trust-ticker">
+      <div class="trust-ticker__track">
+        <span class="trust-ticker__item">25+ лет опыта</span><span class="trust-ticker__sep">◆</span>
+        <span class="trust-ticker__item">156+ проектов выполнено</span><span class="trust-ticker__sep">◆</span>
+        <span class="trust-ticker__item">Гарантия 5 лет</span><span class="trust-ticker__sep">◆</span>
+        <span class="trust-ticker__item">78 специалистов</span><span class="trust-ticker__sep">◆</span>
+        <span class="trust-ticker__item">С 1999 года на рынке</span><span class="trust-ticker__sep">◆</span>
+        <span class="trust-ticker__item">Строительство под ключ</span><span class="trust-ticker__sep">◆</span>
+        <span class="trust-ticker__item">Европейское качество</span><span class="trust-ticker__sep">◆</span>
+        <span class="trust-ticker__item">25+ лет опыта</span><span class="trust-ticker__sep">◆</span>
+        <span class="trust-ticker__item">156+ проектов выполнено</span><span class="trust-ticker__sep">◆</span>
+        <span class="trust-ticker__item">Гарантия 5 лет</span><span class="trust-ticker__sep">◆</span>
+        <span class="trust-ticker__item">78 специалистов</span><span class="trust-ticker__sep">◆</span>
+        <span class="trust-ticker__item">С 1999 года на рынке</span><span class="trust-ticker__sep">◆</span>
+        <span class="trust-ticker__item">Строительство под ключ</span><span class="trust-ticker__sep">◆</span>
+        <span class="trust-ticker__item">Европейское качество</span>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section class="about" id="about">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag" data-i18n="aboutTag">О компании</span>
-          <h2 class="section-title" data-i18n="hero.0.title">Что мы делаем</h2>
+        <div class="about__grid">
+          <div class="about__content">
+            <span class="section-tag" data-i18n="aboutTag">О компании</span>
+            <h2 class="section-title" data-i18n="aboutTitle">CLEMANTIN S.R.L.</h2>
+            <p class="about__text">CLEMANTIN S.R.L. — это общество с частным капиталом, оказывающее услуги в области строительства на рынке Севера Молдовы с 1999 года.</p>
+            <p class="about__text">С самого начала мы исходили из того, что <strong>удовлетворённый клиент — лучшая форма продвижения</strong>. Именно поэтому большинство новых клиентов связываются с нами по рекомендации наших старых клиентов.</p>
+            <p class="about__text">За эти годы мы внимательно следили за строгим соблюдением системы контроля качества на всех уровнях.</p>
+            <div class="about__features">
+              <div class="about__feature">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Полный цикл строительства</span>
+              </div>
+              <div class="about__feature">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Собственное проектирование</span>
+              </div>
+              <div class="about__feature">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Контроль на каждом этапе</span>
+              </div>
+              <div class="about__feature">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Гарантия на все работы</span>
+              </div>
+            </div>
+          </div>
+          <div class="about__visual">
+            <div class="about__image-block">
+              <img src="images/about.webp" loading="lazy" alt="CLEMANTIN — строительство под ключ" class="about__image">
+            </div>
+            <div class="about__experience-badge">
+              <span class="about__experience-number">25+</span>
+              <span class="about__experience-text">лет<br>опыта</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services teaser -->
+    <section class="home-services" id="homeServices">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag">Услуги</span>
+          <h2 class="section-title section-title--underline">Что мы предлагаем</h2>
+          <p class="section-desc">Полный спектр строительных и отделочных услуг</p>
         </div>
         <div class="home-services__grid" id="servicesGrid"></div>
+        <div class="home-services__more" style="text-align:center;margin-top:32px">
+          <a href="services.html" class="btn btn--accent">Все услуги →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process steps -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag" data-i18n="process.tag">Как мы работаем</span>
+          <h2 class="section-title" data-i18n="process.title">Этапы строительства</h2>
+          <p class="section-desc" data-i18n="process.desc">От идеи до сдачи — мы сопровождаем проект на каждом этапе</p>
+        </div>
+        <div class="services__grid">
+          <div class="service-card">
+            <div class="service-card__number">01</div>
+            <div class="service-card__icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+            </div>
+            <h3 class="service-card__title">Проектирование</h3>
+            <p class="service-card__text">Индивидуальное проектирование домов и зданий. Разработка собственных проектов под ключ.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__number">02</div>
+            <div class="service-card__icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <h3 class="service-card__title">Смета и бюджет</h3>
+            <p class="service-card__text">Подробный расчёт сметы и всего бюджета на строительные и инженерные работы.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__number">03</div>
+            <div class="service-card__icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-5h6v5"/></svg>
+            </div>
+            <h3 class="service-card__title">Строительство</h3>
+            <p class="service-card__text">Все этапы по строительству. Качественный контроль на всех этапах и промежуточные отчёты.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__number">04</div>
+            <div class="service-card__icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="service-card__title">Сдача проекта</h3>
+            <p class="service-card__text">Подробный отчёт и авторский контроль на этапе сдачи проекта клиенту.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why us -->
+    <section class="why-us">
+      <div class="container">
+        <div class="why-us__grid">
+          <div class="why-us__item">
+            <div class="why-us__icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="why-us__number">25+</div>
+            <div class="why-us__label">лет опыта</div>
+          </div>
+          <div class="why-us__item">
+            <div class="why-us__icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div class="why-us__number">156</div>
+            <div class="why-us__label">сданных объектов</div>
+          </div>
+          <div class="why-us__item">
+            <div class="why-us__icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="why-us__number">5</div>
+            <div class="why-us__label">лет гарантии</div>
+          </div>
+          <div class="why-us__item">
+            <div class="why-us__icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+            <div class="why-us__number">€ 0</div>
+            <div class="why-us__label">бесплатная смета</div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Houses teaser -->
     <section class="home-houses" id="projects-teaser">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header section-header--center">
           <span class="section-tag" data-i18n="nav.projects">Проекты домов</span>
-          <h2 class="section-title">67+</h2>
+          <h2 class="section-title">67 готовых проектов</h2>
+          <p class="section-desc">Выберите дом мечты — от стандартных до премиум</p>
         </div>
         <div class="home-houses__grid" id="housesTeaser"></div>
         <div style="text-align:center;margin-top:32px">
-          <a href="projects.html" class="btn btn--accent" data-i18n="portfolio.more">Все проекты</a>
+          <a href="projects.html" class="btn btn--accent">Все проекты →</a>
         </div>
       </div>
     </section>
 
-    <!-- Calculator CTA -->
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-tag" data-i18n="portfolio.tag">Портфолио</span>
+          <h2 class="section-title section-title--underline" data-i18n="portfolio.title">Наши работы</h2>
+          <p class="section-desc" data-i18n="portfolio.desc">Реализованные проекты в Молдове</p>
+        </div>
+        <div class="portfolio__filters" id="portfolioFilters">
+          <button class="portfolio__filter active" data-filter="all">Все</button>
+          <button class="portfolio__filter" data-filter="interior">Внутренняя отделка</button>
+          <button class="portfolio__filter" data-filter="construction">Строительство</button>
+          <button class="portfolio__filter" data-filter="facade">Фасады</button>
+          <button class="portfolio__filter" data-filter="renovation">Реновация</button>
+        </div>
+        <div class="portfolio__grid" id="portfolioGrid"></div>
+      </div>
+    </section>
+
+    <!-- Calc CTA -->
     <section class="calc-cta">
       <div class="container">
         <div class="calc-cta__inner">
@@ -172,26 +331,26 @@
     </section>
 
     <!-- Reviews -->
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Reviews</span>
-          <h2 class="section-title">Что говорят клиенты</h2>
+        <div class="section-header section-header--center">
+          <span class="section-tag">Отзывы</span>
+          <h2 class="section-title section-title--underline">Что говорят клиенты</h2>
         </div>
-        <div class="reviews__viewport">
+        <div class="reviews__slider">
           <div class="reviews__track" id="reviewsTrack"></div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="faq">
+    <section class="faq" id="faq">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header section-header--center">
           <span class="section-tag">FAQ</span>
           <h2 class="section-title">Частые вопросы</h2>
         </div>
-        <div class="faq__list" id="faqList"></div>
+        <div class="faq__list" id="faqList" style="max-width:800px;margin:32px auto 0"></div>
       </div>
     </section>
   </main>
@@ -204,7 +363,7 @@
           <p class="footer__text" data-i18n="footer.desc">CLEMANTIN S.R.L. — строительная компания в Молдове.</p>
         </div>
         <div class="footer__col">
-          <h4 class="footer__heading" data-i18n="footer.links">Полезные ссылки</h4>
+          <h4 class="footer__heading" data-i18n="footer.links">Ссылки</h4>
           <ul class="footer__links">
             <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
             <li><a href="services.html" data-i18n="nav.services">Услуги</a></li>
@@ -223,16 +382,15 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 1999—<span id="copyrightYear">2026</span> CLEMANTIN S.R.L. <span data-i18n="footer.rights">Все права защищены</span>.</p>
+        <p>&copy; 1999—<span id="copyrightYear">2026</span> CLEMANTIN S.R.L.</p>
         <p class="footer__dev">Demo by <a href="../../">Victor Shiman / OmniCode Studio</a></p>
       </div>
     </div>
   </footer>
 
   <button class="back-to-top" id="backToTop"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
-
   <div class="toast" id="toast"><span class="toast__text" id="toastText"></span></div>
 
-  <script src="app.js?v=2"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>

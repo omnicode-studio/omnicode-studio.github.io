@@ -186,6 +186,45 @@ function renderHousesTeaser() {
   });
 }
 
+function renderPortfolio() {
+  var grid = document.getElementById('portfolioGrid');
+  if (!grid) return;
+  loadJson('portfolio-projects.json').then(function (items) {
+    grid.innerHTML = items.map(function (p) {
+      var img = p.thumb || p.images && p.images[0] || '';
+      // remap '/images/...' to relative 'images/...' + .webp swap
+      img = img.replace(/^\//, '').replace(/\.(jpg|jpeg|png)$/i, '.webp');
+      return (
+        '<div class="portfolio__item" data-category="' + (p.catKey || 'all') + '">' +
+        '  <img src="' + img + '" alt="' + escapeAttr(L(p, 'title')) + '" class="portfolio__img" loading="lazy">' +
+        '  <div class="portfolio__overlay">' +
+        '    <div class="portfolio__info">' +
+        '      <span class="portfolio__cat">' + escapeHtml(L(p, 'category')) + '</span>' +
+        '      <h3 class="portfolio__name">' + escapeHtml(L(p, 'title')) + '</h3>' +
+        '    </div>' +
+        '  </div>' +
+        '</div>'
+      );
+    }).join('');
+
+    // Filter buttons
+    var filterBar = document.getElementById('portfolioFilters');
+    if (filterBar) {
+      filterBar.querySelectorAll('.portfolio__filter').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterBar.querySelectorAll('.portfolio__filter').forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          var f = btn.dataset.filter;
+          grid.querySelectorAll('.portfolio__item').forEach(function (item) {
+            var match = f === 'all' || item.dataset.category === f;
+            item.style.display = match ? '' : 'none';
+          });
+        });
+      });
+    }
+  });
+}
+
 function renderHouses() {
   var grid = document.getElementById('housesGrid');
   if (!grid) return;
@@ -760,6 +799,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (document.getElementById('servicesGrid')) renderServices();
     if (document.getElementById('housesTeaser')) renderHousesTeaser();
     if (document.getElementById('housesGrid')) renderHouses();
+    if (document.getElementById('portfolioGrid')) renderPortfolio();
     if (document.getElementById('reviewsTrack')) renderReviews();
     if (document.getElementById('faqList')) renderFaq();
     if (document.getElementById('teamGrid')) renderTeam();
