@@ -8792,12 +8792,15 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--gold-hover);
 }
 
-/* Push tricolore + header below the fixed banner */
+/* Push tricolore + header below the fixed banner.
+   !important is needed because .home-page .header has higher specificity
+   for some properties; we don't want top accidentally overridden. */
 .tricolore {
-  top: var(--demo-banner-h);
+  top: var(--demo-banner-h) !important;
 }
-.header {
-  top: calc(var(--demo-banner-h) + 3px);
+.header,
+.home-page .header {
+  top: calc(var(--demo-banner-h) + 3px) !important;
 }
 
 /* Anchor jump offset accounts for banner + header */
