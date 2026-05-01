@@ -100,12 +100,11 @@
 
       <!-- Filled state -->
       <div id="cartContent" class="cart-content" style="display:none">
-        <div class="cart-grid">
-          <div class="cart-items" id="cartItems"></div>
+        <div class="cart-items" id="cartItems"></div>
 
-          <!-- Checkout form (combined with cart on demo) -->
-          <aside class="cart-aside">
-            <form id="checkoutForm" class="checkout-form">
+        <!-- Checkout form acts as the cart-summary aside (renome's grid expects 2 columns) -->
+        <aside class="cart-aside">
+          <form id="checkoutForm" class="checkout-form">
               <h3 class="checkout-form__title" data-i18n="checkout.contactInfo">Date de contact</h3>
 
               <fieldset class="checkout-fieldset">
@@ -167,9 +166,8 @@
               <p class="cart-summary__hint" style="margin:12px 0 0;font-size:0.8rem;color:var(--text-muted);text-align:center;" data-i18n="cart.demoNote">Demo: заказ отправится в Telegram-бот разработчика, не в ресторан.</p>
 
               <a href="menu.html" class="btn btn--outline btn--full" style="margin-top:8px" data-i18n="cart.continueShopping">Continuă cumpărăturile</a>
-            </form>
-          </aside>
-        </div>
+          </form>
+        </aside>
       </div>
     </div>
   </div>

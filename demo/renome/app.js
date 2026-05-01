@@ -374,23 +374,23 @@ function renderCart() {
   if (contentEl) contentEl.style.display = '';
 
   itemsEl.innerHTML = items.map(function (item) {
-    var img = item.image ? '<img src="' + thumbUrl(item.image) + '" alt="' + escapeAttr(item.name) + '">' :
-      '<div class="cart-item__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>';
+    var imgHtml = item.image
+      ? '<img src="' + thumbUrl(item.image) + '" alt="' + escapeAttr(item.name) + '">'
+      : '<div class="cart-item__placeholder"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>';
     return (
       '<div class="cart-item" data-id="' + item.id + '">' +
-      '  <div class="cart-item__visual">' + img + '</div>' +
-      '  <div class="cart-item__body">' +
-      '    <h3 class="cart-item__name">' + escapeHtml(item.name) + '</h3>' +
-      (item.weight ? '<span class="cart-item__weight">' + escapeHtml(item.weight) + '</span>' : '') +
-      '    <div class="cart-item__price">' + item.price + ' MDL</div>' +
+      '  <div class="cart-item__image">' + imgHtml + '</div>' +
+      '  <div class="cart-item__info">' +
+      '    <div class="cart-item__name">' + escapeHtml(item.name) + '</div>' +
+      (item.weight ? '<div class="cart-item__weight">' + escapeHtml(item.weight) + '</div>' : '') +
       '  </div>' +
       '  <div class="cart-item__qty">' +
-      '    <button class="cart-item__qty-btn" data-action="dec">−</button>' +
-      '    <input type="number" class="cart-item__qty-input" value="' + item.quantity + '" min="1" max="99">' +
-      '    <button class="cart-item__qty-btn" data-action="inc">+</button>' +
+      '    <button class="cart-item__qty-btn" type="button" data-action="dec">−</button>' +
+      '    <input type="number" class="cart-item__qty-input cart-item__qty-value" value="' + item.quantity + '" min="1" max="99">' +
+      '    <button class="cart-item__qty-btn" type="button" data-action="inc">+</button>' +
       '  </div>' +
-      '  <div class="cart-item__total">' + (item.price * item.quantity) + ' MDL</div>' +
-      '  <button class="cart-item__remove" aria-label="Remove">' +
+      '  <div class="cart-item__price">' + (item.price * item.quantity) + ' MDL</div>' +
+      '  <button class="cart-item__remove" type="button" aria-label="Remove">' +
       '    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-2 14a2 2 0 01-2 2H9a2 2 0 01-2-2L5 6"/><path d="M10 11v6M14 11v6"/></svg>' +
       '  </button>' +
       '</div>'
