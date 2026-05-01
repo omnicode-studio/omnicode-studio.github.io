@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Заказ принят — Renome (demo)</title>
+  <link rel="icon" type="image/png" href="img/logo.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="demo-banner">
+    <span data-i18n="demoBanner.text">Это демо-витрина. Заказы не передаются в реальный ресторан.</span>
+    <a href="../../" class="demo-banner__back" data-i18n="demoBanner.back">← к портфолио</a>
+  </div>
+
+  <div class="tricolore">
+    <span class="tricolore__green"></span>
+    <span class="tricolore__white"></span>
+    <span class="tricolore__red"></span>
+  </div>
+
+  <header class="header" id="siteHeader">
+    <div class="header__row">
+      <a href="index.html" class="header__logo">
+        <img src="img/logo.webp" alt="Renome Pizza" class="header__logo-img">
+        <span class="header__logo-text">RENOME</span>
+      </a>
+      <nav class="header__nav" id="mainNav">
+        <a href="index.html" class="header__nav-link" data-i18n="nav.home">Acasă</a>
+        <span class="header__nav-dot">&middot;</span>
+        <a href="menu.html" class="header__nav-link" data-i18n="nav.menu">Meniu</a>
+      </nav>
+      <div class="header__actions">
+        <div class="header__lang">
+          <button class="header__lang-btn" data-lang="ro">RO</button>
+          <span class="header__lang-sep">/</span>
+          <button class="header__lang-btn active" data-lang="ru">RU</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-offset">
+    <div class="container" style="max-width:560px;text-align:center;padding:80px 24px 120px;">
+      <div class="thanks-icon" style="width:96px;height:96px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;color:var(--accent);">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <h1 class="thanks-title" style="font-family:var(--font-display);font-size:36px;font-weight:600;margin-bottom:16px;color:var(--accent);" data-i18n="thanks.title">Заказ принят!</h1>
+      <p class="thanks-subtitle" style="font-size:16px;color:var(--text-secondary);margin-bottom:32px;" data-i18n="thanks.subtitle">В реальном Renome менеджер связался бы с вами в течение 5 минут. Это демо — заявка ушла в Telegram-бот разработчика для теста.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="menu.html" class="btn btn--primary btn--lg" data-i18n="thanks.viewMenu">Вернуться в меню</a>
+        <a href="../../" class="btn btn--outline btn--lg" data-i18n="thanks.backToPortfolio">К портфолио</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-v2">
+    <div class="footer-v2__bottom">
+      <div class="container">
+        <div class="footer-v2__bottom-inner">
+          <p>&copy; <span id="copyrightYear">2026</span> Renome &middot; Bălți</p>
+          <p class="footer-v2__dev"><span data-i18n="footer.devCredit">Дизайн и разработка</span> — <a href="../../" class="footer-v2__dev-link">Victor Shiman / OmniCode Studio</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,612 @@
+{
+  "ro": {
+    "nav": {
+      "home": "Acasă",
+      "menu": "Meniu",
+      "about": "Despre noi",
+      "contacts": "Contacte",
+      "cart": "Coș de cumpărături",
+      "myAccount": "Cabinetul meu",
+      "login": "Autentificare"
+    },
+    "hero": {
+      "badge": "Cafenea Italiană în Bălți",
+      "title": "Italia e mai aproape <span>decât crezi</span>",
+      "subtitle": "Bucătărie italiană — pizza din cuptor pe lemne și preparatele preferate din tradițiile est-europene. Comandă online sau vino să te bucuri de atmosfera RENOME. Sărbătoarea ta, ziua de naștere, evenimentul corporativ sau întâlnirea va ocupa un loc de cinste în colecția amintirilor frumoase.",
+      "viewMenu": "Vezi Meniul",
+      "callUs": "Sună-ne"
+    },
+    "popular": {
+      "tag": "Cele mai comandate",
+      "title": "Populare",
+      "desc": "Preparatele preferate ale clienților noștri",
+      "viewAll": "Vezi meniul complet"
+    },
+    "categories": {
+      "tag": "Ce servim",
+      "title": "Categorii"
+    },
+    "instagram": {
+      "tag": "Urmărește-ne pe Instagram",
+      "title": "Din viața Renome",
+      "subtitle": "Atmosferă, preparate proaspete și momente din bucătăria noastră",
+      "follow": "Urmărește @renome.balti",
+      "viewPost": "Vezi publicația"
+    },
+    "aboutSection": {
+      "tag": "Despre noi",
+      "title": "Renome",
+      "subtitle": "Bucătărie italiană autentică în Bălți",
+      "desc": "Renome — gustul autentic al Italiei: aluat subțire, ingrediente proaspete și aroma focului viu. Prânzuri copioase pe gustul cel mai rafinat. Completarea ideală a serii — fumul blând al narghielei aromate într-o atmosferă relaxată și confortabilă.",
+      "card1title": "Pizza din cuptor pe lemne",
+      "card1desc": "Aluat ușor, aerat și crustă crocantă. Bordul umplut cu cremă de brânză — și mai multă plăcere în fiecare felie",
+      "card2title": "Meniu italian",
+      "card2desc": "Paste, pizza, salate, supe și feluri calde — meniu complet cu cele mai bune ingrediente și rețete de autor",
+      "card3title": "Atmosferă și relaxare",
+      "card3desc": "Interior stilat, narghilea premium și serviciu atent — locul ideal pentru întâlniri cu prietenii și cine în familie"
+    },
+    "contact": {
+      "tag": "Contactează-ne",
+      "title": "Vino la Renome",
+      "address": "Adresă",
+      "addressVal": "str. Calea Ieșilor 57, Bălți",
+      "phone": "Telefon / Rezervare",
+      "phoneVal": "+373 78 666 613",
+      "schedule": "Program",
+      "scheduleWeek": "Luni - Duminică: 10:00 - 01:00",
+      "scheduleWeekend": "Zilnic, fără zile libere",
+      "social": "Social"
+    },
+    "menu": {
+      "pageTitle": "Meniu",
+      "tag": "Renome",
+      "subtitle": "Alege din preparatele noastre italiene preferate",
+      "all": "Toate"
+    },
+    "product": {
+      "addToCart": "În coș",
+      "unavailable": "Indisponibil momentan",
+      "related": "Din aceeași categorie",
+      "view": "Vezi"
+    },
+    "badges": {
+      "new": "NOU",
+      "popular": "POPULAR"
+    },
+    "cart": {
+      "pageTitle": "Coș de cumpărături",
+      "empty": "Coșul este gol",
+      "addItems": "Adăugați preparate din meniu",
+      "backToMenu": "Înapoi la meniu",
+      "orderSummary": "Rezumatul comenzii",
+      "products": "Produse",
+      "delivery": "Livrare",
+      "free": "Gratuită",
+      "deliveryFee": "50 MDL",
+      "freeFrom": "Gratuit de la 500 MDL",
+      "total": "Total",
+      "orderNow": "Comandă acum",
+      "continueShopping": "Continuă cumpărăturile"
+    },
+    "checkout": {
+      "pageTitle": "Finalizare comandă",
+      "orderType": "Tipul comenzii",
+      "deliveryType": "Livrare",
+      "pickupType": "Ridicare din local",
+      "contactInfo": "Date de contact",
+      "name": "Nume",
+      "phone": "Telefon",
+      "email": "Email",
+      "addressSection": "Adresa de livrare",
+      "addressPlaceholder": "Adresa completă",
+      "paymentMethod": "Metoda de plată",
+      "cash": "Numerar",
+      "card": "Card la livrare",
+      "online": "Plată online",
+      "onlineSoon": "în curând",
+      "comment": "Comentariu",
+      "commentPlaceholder": "Dorințe speciale...",
+      "placeOrder": "Plasează comanda",
+      "placingOrder": "Se plasează comanda...",
+      "yourOrder": "Comanda ta",
+      "schedulePickup": "Ridică la o oră exactă",
+      "pickupTime": "Ora ridicării",
+      "pickupTimePlaceholder": "Alege ora...",
+      "cheeseCrust": "Bord cu brânză",
+      "cheeseCrustShort": "+bord cu brânză",
+      "selectTimeError": "Alege ora de ridicare",
+      "preorderType": "Pre-comandă",
+      "preorderHint": "Comandă acum, ridică la ora dorită",
+      "preorderHintTomorrow": "Comanda va fi gata mâine",
+      "today": "Astăzi",
+      "tomorrow": "Mâine",
+      "onlyTomorrow": "Doar pentru mâine",
+      "pickupMyself": "Ridic personal",
+      "deliverByTime": "Livrare la ora indicată",
+      "allSlotsAvailable": "Alege ora convenabilă",
+      "nearestSlot": "Cea mai apropiată oră",
+      "noSlotsToday": "Pentru azi e târziu — s-a selectat mâine",
+      "pizzaPreorderNotice": "Pizza este disponibilă de la 17:00. Alege ora pre-comenzii"
+    },
+    "extras": {
+      "cheeseCrust": "Bord cu brânză"
+    },
+    "auth": {
+      "loginTitle": "Autentificare",
+      "loginSubtitle": "Bine ai revenit la Renome",
+      "loginError": "Email sau parolă incorectă",
+      "email": "Email",
+      "password": "Parolă",
+      "loginBtn": "Intră în cont",
+      "noAccount": "Nu ai cont?",
+      "register": "Înregistrează-te",
+      "registerTitle": "Înregistrare",
+      "registerSubtitle": "Creează-ți cont la Renome",
+      "registerError": "Completați toate câmpurile. Parola minim 6 caractere.",
+      "emailExists": "Acest email este deja înregistrat",
+      "nameLabel": "Numele",
+      "phoneLabel": "Telefon",
+      "createAccount": "Creează cont",
+      "hasAccount": "Ai deja cont?",
+      "loginLink": "Autentifică-te"
+    },
+    "account": {
+      "pageTitle": "Cabinetul meu",
+      "adminPanel": "Admin Panel",
+      "logout": "Deconectare",
+      "profile": "Profilul meu",
+      "name": "Nume",
+      "email": "Email",
+      "orders": "Comenzile mele",
+      "noOrders": "Nu aveți comenzi încă",
+      "orderNow": "Comandă acum",
+      "orderId": "#",
+      "date": "Data",
+      "total": "Total"
+    },
+    "orderSuccess": {
+      "pageTitle": "Comandă plasată",
+      "heading": "Comanda a fost plasată!",
+      "thanks": "Mulțumim",
+      "processing": "Vom prelucra comanda ta în cel mai scurt timp.",
+      "total": "Total:",
+      "payment": "Metoda de plată:",
+      "cashPayment": "Numerar",
+      "cardPayment": "Card",
+      "onlinePayment": "Online",
+      "deliveryTo": "Livrare la:",
+      "pickup": "Ridicare din local",
+      "backToMenu": "Înapoi la meniu",
+      "home": "Pagina principală"
+    },
+    "notFound": {
+      "title": "404",
+      "message": "Pagina nu a fost găsită",
+      "home": "Pagina principală"
+    },
+    "footer": {
+      "desc": "Renome — cafenea italiană în Bălți, Moldova. Pizza din cuptor pe lemne, paste, sushi, salate, deserturi și cocktailuri. Livrare mâncare și ridicare din local.",
+      "menuTitle": "Meniu",
+      "pizza": "Pizza",
+      "sushi": "Sushi",
+      "hotAppetizers": "Aperitive calde",
+      "salate": "Salate",
+      "hotDishes": "Feluri calde",
+      "paste": "Paste",
+      "infoTitle": "Informații",
+      "fullMenu": "Meniu complet",
+      "aboutUs": "Despre noi",
+      "cartLink": "Coș de cumpărături",
+      "loginLink": "Autentificare",
+      "contactTitle": "Contacte",
+      "scheduleWeek": "Lun-Dum: 10:00 - 01:00",
+      "scheduleWeekend": "Zilnic, fără zile libere",
+      "copyright": "Toate drepturile rezervate."
+    },
+    "errors": {
+      "requiredFields": "Completați câmpurile obligatorii",
+      "invalidCart": "Date incorecte ale coșului",
+      "emptyCart": "Coșul este gol",
+      "itemsUnavailable": "Produsele nu sunt disponibile",
+      "csrf": "Eroare de securitate (CSRF). Reîncărcați pagina.",
+      "forbidden": "Acces interzis",
+      "prefix": "Eroare: ",
+      "unknown": "Eroare necunoscută",
+      "network": "Eroare de rețea: "
+    },
+    "toast": {
+      "addedToCart": "adăugat în coș!"
+    },
+    "qr": {
+      "pageTitle": "QR Menu",
+      "subtitle": "Italian Café",
+      "cta": "Scanează meniul",
+      "desc": "Deschide camera telefonului și scanează codul QR pentru a vedea meniul și a comanda online",
+      "address": "str. Calea Ieșilor 57, Bălți",
+      "schedule": "Zilnic: 10:00 — 01:00",
+      "print": "Printează QR"
+    },
+    "preorder": {
+      "pageTitle": "Pre-comandă pizza",
+      "tag": "Pre-comandă",
+      "badge": "Pre-comandă",
+      "strip": "Comandă acum, ridică de la 17:00 până la 22:00",
+      "stripLink": "Pre-comandă →",
+      "available": "Disponibil pentru pre-comandă",
+      "hours": "Comandă acum, ridică între 17:00–22:00",
+      "subtitle": "Comandă acum, ridică la ora dorită (16:00–22:00)",
+      "timeLabel": "Ora ridicării",
+      "timePlaceholder": "Alege ora...",
+      "cheeseCrust": "Bord cu brânză",
+      "cheeseCrustShort": "bord cu brânză",
+      "cheeseCrustPrice": "+20 MDL",
+      "addBtn": "Adaugă",
+      "yourOrder": "Comanda ta",
+      "emptySelection": "Adaugă pizza din listă",
+      "selectTime": "Alege ora de ridicare",
+      "name": "Nume",
+      "phone": "Telefon",
+      "placePreorder": "Plasează pre-comanda",
+      "placingPreorder": "Se plasează...",
+      "nav": "Pre-comandă"
+    },
+    "reviews": {
+      "title": "Recenzii",
+      "noReviews": "Nicio recenzie momentan",
+      "beFirst": "Fii primul care lasă o recenzie!",
+      "writeReview": "Scrie o recenzie",
+      "yourRating": "Ratingul tău",
+      "commentPlaceholder": "Povestește despre experiența ta...",
+      "submit": "Trimite recenzia",
+      "submitting": "Se trimite...",
+      "thankYou": "Mulțumim pentru recenzia ta!",
+      "pendingApproval": "Recenzia ta va fi vizibilă după aprobare.",
+      "alreadyReviewed": "Ai lăsat deja o recenzie pentru acest produs.",
+      "loginToReview": "Autentifică-te pentru a lăsa o recenzie",
+      "reviewCount": "recenzii",
+      "reviewCountSingle": "recenzie"
+    },
+    "faq": {
+      "tag": "Întrebări frecvente",
+      "title": "Informații utile",
+      "items": [
+        {
+          "q": "Cum pot comanda mâncare de la Renome cu livrare în Bălți?",
+          "a": "Poți comanda online direct pe site-ul nostru — alege preparatele, adaugă în coș și plasează comanda. Livrăm în tot orașul Bălți. De asemenea, poți suna la +373 78 666 613."
+        },
+        {
+          "q": "Care este programul de lucru al cafenelei Renome?",
+          "a": "Suntem deschiși zilnic, de luni până duminică, de la 10:00 până la 01:00, fără zile libere."
+        },
+        {
+          "q": "Ce tipuri de bucătărie serviți?",
+          "a": "Preparăm bucătărie italiană autentică: pizza din cuptor pe lemne, paste proaspete, risotto, antipasti, sushi, salate, deserturi și cocktailuri de autor."
+        },
+        {
+          "q": "Acceptați rezervări de masă?",
+          "a": "Da, acceptăm rezervări. Sunați la +373 78 666 613 sau scrieți-ne pe Instagram @renome.balti."
+        },
+        {
+          "q": "Cât costă livrarea în Bălți?",
+          "a": "Livrarea în orașul Bălți — 50 MDL. La comenzi de la 500 MDL livrarea este gratuită."
+        },
+        {
+          "q": "Unde se află cafeneaua Renome?",
+          "a": "Ne aflăm pe str. Calea Ieșilor 57, Bălți, Moldova. Ne puteți găsi ușor pe Google Maps."
+        }
+      ]
+    },
+    "meta": {
+      "homeTitle": "Renome — Cafenea Italiană în Bălți | Pizza, Paste, Sushi | Livrare & Precomandă",
+      "homeDesc": "Renome — cafenea italiană pe str. Calea Ieșilor 57, Bălți, Moldova. Pizza din cuptor pe lemne, paste, sushi, salate, deserturi și cocktailuri. Comandă online cu livrare sau ridică din local. Program: 10:00–01:00 zilnic.",
+      "menuH1": "Meniu Cafenea Renome — Bălți",
+      "menuTitle": "Meniu Renome Bălți — Pizza, Paste, Sushi, Salate | Comandă Online",
+      "menuDesc": "Meniul complet al cafenelei Renome din Bălți: pizza italiană, paste proaspete, sushi, burgeri, salate, supe, deserturi. Prețuri de la 45 MDL. Livrare rapidă în Bălți."
+    }
+  },
+  "ru": {
+    "nav": {
+      "home": "Главная",
+      "menu": "Меню",
+      "about": "О нас",
+      "contacts": "Контакты",
+      "cart": "Корзина",
+      "myAccount": "Личный кабинет",
+      "login": "Войти"
+    },
+    "hero": {
+      "badge": "Итальянское кафе в Бэлць",
+      "title": "Италия ближе, <span>чем ты думаешь</span>",
+      "subtitle": "Итальянская кухня — пицца из дровяной печи и любимые блюда восточно-европейских традиций. Закажите онлайн или приходите насладиться атмосферой RENOME. Ваш праздник, день рождения, корпоратив, встреча займёт достойное место в копилке добрых воспоминаний.",
+      "viewMenu": "Смотреть Меню",
+      "callUs": "Позвонить"
+    },
+    "popular": {
+      "tag": "Самые заказываемые",
+      "title": "Популярное",
+      "desc": "Любимые блюда наших клиентов",
+      "viewAll": "Смотреть всё меню"
+    },
+    "categories": {
+      "tag": "Что мы подаём",
+      "title": "Категории"
+    },
+    "instagram": {
+      "tag": "Подписывайтесь в Instagram",
+      "title": "Из жизни Renome",
+      "subtitle": "Атмосфера, свежие блюда и моменты из нашей кухни",
+      "follow": "Подписаться @renome.balti",
+      "viewPost": "Смотреть пост"
+    },
+    "aboutSection": {
+      "tag": "О нас",
+      "title": "Renome",
+      "subtitle": "Настоящая итальянская кухня в Бэлць",
+      "desc": "Renome — настоящий вкус Италии: тонкое тесто, свежие ингредиенты и аромат живого огня. Сытные обеды на самый изысканный вкус. Идеальное дополнение к вечеру — мягкий дым ароматного кальяна в расслабленной, уютной обстановке.",
+      "card1title": "Пицца из дровяной печи",
+      "card1desc": "Лёгкое, воздушное тесто и хрустящая корочка. Наполненный крем-сыром бортик — ещё больше удовольствия в каждом кусочке",
+      "card2title": "Итальянское меню",
+      "card2desc": "Паста, пицца, салаты, супы и горячие блюда — полное меню с лучшими ингредиентами и авторскими рецептами",
+      "card3title": "Атмосфера и отдых",
+      "card3desc": "Стильный интерьер, премиальный кальян и внимательный сервис — идеальное место для встреч с друзьями и семейных ужинов"
+    },
+    "contact": {
+      "tag": "Свяжитесь с нами",
+      "title": "Приходите в Renome",
+      "address": "Адрес",
+      "addressVal": "ул. Каля Ешилор 57, Бэлць",
+      "phone": "Телефон / Бронь",
+      "phoneVal": "+373 78 666 613",
+      "schedule": "График",
+      "scheduleWeek": "Понедельник - Воскресенье: 10:00 - 01:00",
+      "scheduleWeekend": "Ежедневно без выходных",
+      "social": "Соцсети"
+    },
+    "menu": {
+      "pageTitle": "Меню",
+      "tag": "Renome",
+      "subtitle": "Выберите из наших лучших итальянских блюд",
+      "all": "Все"
+    },
+    "product": {
+      "addToCart": "В корзину",
+      "unavailable": "Временно недоступно",
+      "related": "Из той же категории",
+      "view": "Смотреть"
+    },
+    "badges": {
+      "new": "НОВИНКА",
+      "popular": "ПОПУЛЯРНОЕ"
+    },
+    "cart": {
+      "pageTitle": "Корзина",
+      "empty": "Корзина пуста",
+      "addItems": "Добавьте блюда из меню",
+      "backToMenu": "Вернуться в меню",
+      "orderSummary": "Итого по заказу",
+      "products": "Товары",
+      "delivery": "Доставка",
+      "free": "Бесплатно",
+      "deliveryFee": "50 MDL",
+      "freeFrom": "Бесплатно от 500 MDL",
+      "total": "Итого",
+      "orderNow": "Оформить заказ",
+      "continueShopping": "Продолжить покупки"
+    },
+    "checkout": {
+      "pageTitle": "Оформление заказа",
+      "orderType": "Тип заказа",
+      "deliveryType": "Доставка",
+      "pickupType": "Самовывоз",
+      "contactInfo": "Контактные данные",
+      "name": "Имя",
+      "phone": "Телефон",
+      "email": "Email",
+      "addressSection": "Адрес доставки",
+      "addressPlaceholder": "Полный адрес",
+      "paymentMethod": "Способ оплаты",
+      "cash": "Наличными",
+      "card": "Картой при получении",
+      "online": "Оплата онлайн",
+      "onlineSoon": "скоро",
+      "comment": "Комментарий",
+      "commentPlaceholder": "Особые пожелания...",
+      "placeOrder": "Оформить заказ",
+      "placingOrder": "Оформляем заказ...",
+      "yourOrder": "Ваш заказ",
+      "schedulePickup": "Забрать к определённому времени",
+      "pickupTime": "Время получения",
+      "pickupTimePlaceholder": "Выберите время...",
+      "cheeseCrust": "Сырный бортик",
+      "cheeseCrustShort": "+сырный бортик",
+      "selectTimeError": "Выберите время получения",
+      "preorderType": "Предзаказ",
+      "preorderHint": "Закажите сейчас, заберите в удобное время",
+      "preorderHintTomorrow": "Заказ будет готов завтра",
+      "today": "Сегодня",
+      "tomorrow": "Завтра",
+      "onlyTomorrow": "Только на завтра",
+      "pickupMyself": "Заберу сам",
+      "deliverByTime": "Доставка к указанному времени",
+      "allSlotsAvailable": "Выберите удобное время",
+      "nearestSlot": "Ближайшее время",
+      "noSlotsToday": "На сегодня уже поздно — выбрано завтра",
+      "pizzaPreorderNotice": "Пицца доступна с 17:00. Выберите время предзаказа"
+    },
+    "extras": {
+      "cheeseCrust": "Сырный бортик"
+    },
+    "auth": {
+      "loginTitle": "Вход",
+      "loginSubtitle": "С возвращением в Renome",
+      "loginError": "Неверный email или пароль",
+      "email": "Email",
+      "password": "Пароль",
+      "loginBtn": "Войти",
+      "noAccount": "Нет аккаунта?",
+      "register": "Зарегистрироваться",
+      "registerTitle": "Регистрация",
+      "registerSubtitle": "Создайте аккаунт в Renome",
+      "registerError": "Заполните все поля. Пароль минимум 6 символов.",
+      "emailExists": "Этот email уже зарегистрирован",
+      "nameLabel": "Имя",
+      "phoneLabel": "Телефон",
+      "createAccount": "Создать аккаунт",
+      "hasAccount": "Уже есть аккаунт?",
+      "loginLink": "Войти"
+    },
+    "account": {
+      "pageTitle": "Личный кабинет",
+      "adminPanel": "Панель админа",
+      "logout": "Выйти",
+      "profile": "Мой профиль",
+      "name": "Имя",
+      "email": "Email",
+      "orders": "Мои заказы",
+      "noOrders": "У вас пока нет заказов",
+      "orderNow": "Заказать сейчас",
+      "orderId": "#",
+      "date": "Дата",
+      "total": "Итого"
+    },
+    "orderSuccess": {
+      "pageTitle": "Заказ оформлен",
+      "heading": "Заказ успешно оформлен!",
+      "thanks": "Спасибо",
+      "processing": "Мы обработаем ваш заказ в кратчайшие сроки.",
+      "total": "Итого:",
+      "payment": "Способ оплаты:",
+      "cashPayment": "Наличные",
+      "cardPayment": "Карта",
+      "onlinePayment": "Онлайн",
+      "deliveryTo": "Доставка по адресу:",
+      "pickup": "Самовывоз",
+      "backToMenu": "Вернуться в меню",
+      "home": "Главная страница"
+    },
+    "notFound": {
+      "title": "404",
+      "message": "Страница не найдена",
+      "home": "Главная страница"
+    },
+    "footer": {
+      "desc": "Renome — итальянское кафе в Бельцах, Молдова. Пицца из дровяной печи, паста, суши, салаты, десерты и коктейли. Доставка еды и самовывоз.",
+      "menuTitle": "Меню",
+      "pizza": "Пицца",
+      "sushi": "Суши",
+      "hotAppetizers": "Горячие закуски",
+      "salate": "Салаты",
+      "hotDishes": "Горячее",
+      "paste": "Паста",
+      "infoTitle": "Информация",
+      "fullMenu": "Полное меню",
+      "aboutUs": "О нас",
+      "cartLink": "Корзина",
+      "loginLink": "Войти",
+      "contactTitle": "Контакты",
+      "scheduleWeek": "Пн-Вс: 10:00 - 01:00",
+      "scheduleWeekend": "Ежедневно без выходных",
+      "copyright": "Все права защищены."
+    },
+    "errors": {
+      "requiredFields": "Заполните обязательные поля",
+      "invalidCart": "Неверные данные корзины",
+      "emptyCart": "Корзина пуста",
+      "itemsUnavailable": "Товары недоступны",
+      "csrf": "Ошибка безопасности (CSRF). Перезагрузите страницу.",
+      "forbidden": "Доступ запрещён",
+      "prefix": "Ошибка: ",
+      "unknown": "Неизвестная ошибка",
+      "network": "Ошибка сети: "
+    },
+    "toast": {
+      "addedToCart": "добавлено в корзину!"
+    },
+    "qr": {
+      "pageTitle": "QR Меню",
+      "subtitle": "Итальянское Кафе",
+      "cta": "Сканируй меню",
+      "desc": "Открой камеру телефона и отсканируй QR-код, чтобы посмотреть меню и заказать онлайн",
+      "address": "ул. Каля Ешилор 57, Бэлць",
+      "schedule": "Ежедневно: 10:00 — 01:00",
+      "print": "Распечатать QR"
+    },
+    "preorder": {
+      "pageTitle": "Предзаказ пиццы",
+      "tag": "Предзаказ",
+      "badge": "Предзаказ",
+      "strip": "Закажи сейчас, забери с 17:00 до 22:00",
+      "stripLink": "Предзаказ →",
+      "available": "Доступен предзаказ",
+      "hours": "Закажи сейчас, забери 17:00–22:00",
+      "subtitle": "Закажите сейчас, заберите в удобное время (16:00–22:00)",
+      "timeLabel": "Время получения",
+      "timePlaceholder": "Выберите время...",
+      "cheeseCrust": "Сырный бортик",
+      "cheeseCrustShort": "сырный бортик",
+      "cheeseCrustPrice": "+20 MDL",
+      "addBtn": "Добавить",
+      "yourOrder": "Ваш заказ",
+      "emptySelection": "Добавьте пиццу из списка",
+      "selectTime": "Выберите время получения",
+      "name": "Имя",
+      "phone": "Телефон",
+      "placePreorder": "Оформить предзаказ",
+      "placingPreorder": "Оформляем...",
+      "nav": "Предзаказ"
+    },
+    "reviews": {
+      "title": "Отзывы",
+      "noReviews": "Пока нет отзывов",
+      "beFirst": "Будьте первым, кто оставит отзыв!",
+      "writeReview": "Написать отзыв",
+      "yourRating": "Ваша оценка",
+      "commentPlaceholder": "Расскажите о своём впечатлении...",
+      "submit": "Отправить отзыв",
+      "submitting": "Отправляем...",
+      "thankYou": "Спасибо за ваш отзыв!",
+      "pendingApproval": "Ваш отзыв будет виден после одобрения.",
+      "alreadyReviewed": "Вы уже оставили отзыв на этот продукт.",
+      "loginToReview": "Войдите, чтобы оставить отзыв",
+      "reviewCount": "отзывов",
+      "reviewCountSingle": "отзыв"
+    },
+    "faq": {
+      "tag": "Часто задаваемые вопросы",
+      "title": "Полезная информация",
+      "items": [
+        {
+          "q": "Как заказать еду из Renome с доставкой по Бельцам?",
+          "a": "Вы можете заказать онлайн на нашем сайте — выберите блюда, добавьте в корзину и оформите заказ. Доставляем по всему городу Бэлць. Также можно позвонить: +373 78 666 613."
+        },
+        {
+          "q": "Какой график работы кафе Renome?",
+          "a": "Мы работаем ежедневно, без выходных, с 10:00 до 01:00."
+        },
+        {
+          "q": "Какую кухню вы предлагаете?",
+          "a": "Мы готовим настоящую итальянскую кухню: пицца из дровяной печи, свежая паста, ризотто, антипасти, суши, салаты, десерты и авторские коктейли."
+        },
+        {
+          "q": "Можно ли забронировать столик?",
+          "a": "Да, мы принимаем бронирование. Позвоните: +373 78 666 613 или напишите нам в Instagram @renome.balti."
+        },
+        {
+          "q": "Сколько стоит доставка по Бельцам?",
+          "a": "Доставка по городу Бэлць — 50 MDL. При заказе от 500 MDL доставка бесплатная."
+        },
+        {
+          "q": "Где находится кафе Renome?",
+          "a": "Мы находимся по адресу ул. Каля Ешилор 57, Бэлць (Бельцы), Молдова. Нас легко найти на Google Maps."
+        }
+      ]
+    },
+    "meta": {
+      "homeTitle": "Renome — Итальянское Кафе в Бельцах (Бэлць) | Пицца, Паста, Суши | Доставка",
+      "homeDesc": "Renome (Реноме) — итальянское кафе в Бельцах, ул. Каля Ешилор 57. Пицца из дровяной печи, паста, суши, салаты, десерты и коктейли. Доставка еды по Бельцам. Кальян, живая музыка. Ежедневно 10:00–01:00.",
+      "menuH1": "Меню кафе Renome — Бельцы",
+      "menuTitle": "Меню кафе Renome Бельцы — Пицца, Паста, Суши, Салаты | Заказать Онлайн",
+      "menuDesc": "Полное меню кафе Renome (Реноме) в Бельцах: итальянская пицца, свежая паста, суши, бургеры, салаты, супы, десерты. Цены от 45 MDL. Быстрая доставка еды по Бельцам."
+    }
+  }
+}
