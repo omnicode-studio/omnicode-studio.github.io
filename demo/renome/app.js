@@ -56,7 +56,7 @@ function applyI18n() {
   // Custom strings not in renome's locales (demo banner, thanks, etc.)
   var customRu = {
     'demoBanner.text': 'Это демо-витрина. Заказы не передаются в реальный ресторан.',
-    'demoBanner.back': '← к портфолио',
+    'demoBanner.back': 'к портфолио',
     'menu.searchPlaceholder': 'Поиск по меню...',
     'thanks.title': 'Заказ принят!',
     'thanks.subtitle': 'В реальном Renome менеджер связался бы с вами в течение 5 минут. Это демо — заявка ушла в Telegram-бот разработчика для теста.',
@@ -69,7 +69,7 @@ function applyI18n() {
   };
   var customRo = {
     'demoBanner.text': 'Aceasta este o vitrină demo. Comenzile nu ajung la restaurantul real.',
-    'demoBanner.back': '← înapoi la portofoliu',
+    'demoBanner.back': 'înapoi la portofoliu',
     'menu.searchPlaceholder': 'Căutare în meniu...',
     'thanks.title': 'Comandă primită!',
     'thanks.subtitle': 'În Renome real, un manager v-ar contacta în 5 minute. Acesta este demo — cererea a fost trimisă în botul Telegram al dezvoltatorului pentru test.',
