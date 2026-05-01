@@ -780,13 +780,18 @@ function iconSvg(name) {
   return icons[name] || '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/></svg>';
 }
 
-// Service worker registration
+// Service worker: actively unregister any previously installed SW.
+// PWA was dropped because cached SWs from earlier broken builds kept
+// serving stale assets. Plain HTTP caching is now the only mechanism.
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(function (err) {
-      console.warn('SW registration failed:', err);
-    });
-  });
+  navigator.serviceWorker.getRegistrations().then(function (regs) {
+    regs.forEach(function (r) { r.unregister(); });
+  }).catch(function () {});
+  if ('caches' in window) {
+    caches.keys().then(function (keys) {
+      keys.forEach(function (k) { caches.delete(k); });
+    }).catch(function () {});
+  }
 }
 
 // ============================================================

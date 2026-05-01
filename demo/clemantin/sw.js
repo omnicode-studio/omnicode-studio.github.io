@@ -1,61 +1,36 @@
-// Demo PWA service worker for /demo/clemantin/
-// All paths are RELATIVE so the SW works regardless of host (works under
-// /demo/clemantin/ on GitHub Pages, where scope is the SW directory).
-var CACHE_NAME = 'clemantin-demo-v2';
-var APP_SHELL = [
-  './',
-  './index.html',
-  './style.css',
-  './app.js',
-  './manifest.json',
-  './images/logo-white.webp',
-  './images/logo.webp'
-];
+// KILL-SWITCH SW. On install: skip waiting → activate immediately.
+// On activate: delete every cache, unregister this SW, force every
+// open tab to reload itself. After this, no SW is registered for the
+// origin and no Cache Storage entry remains.
+//
+// This replaces the previous PWA SW so any user who visited during
+// the broken cache window gets cleaned up automatically the moment
+// their browser does its next routine sw.js re-check (default 24h,
+// or sooner per spec — many browsers re-fetch on each navigation).
 
 self.addEventListener('install', function (event) {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(function (cache) { return cache.addAll(APP_SHELL); })
-  );
   self.skipWaiting();
 });
 
 self.addEventListener('activate', function (event) {
   event.waitUntil(
-    caches.keys().then(function (keys) {
-      return Promise.all(
-        keys.filter(function (k) { return k !== CACHE_NAME; })
-            .map(function (k) { return caches.delete(k); })
-      );
-    })
-  );
-  self.clients.claim();
-});
-
-self.addEventListener('fetch', function (event) {
-  if (event.request.method !== 'GET') return;
-
-  // Same-origin only — never cache cross-origin (Telegram API, fonts CDN, etc.)
-  if (new URL(event.request.url).origin !== self.location.origin) return;
-
-  // Network-first for HTML so fresh updates land quickly
-  var accept = event.request.headers.get('accept') || '';
-  if (accept.indexOf('text/html') !== -1) {
-    event.respondWith(
-      fetch(event.request).catch(function () { return caches.match(event.request); })
-    );
-    return;
-  }
-
-  // Cache-first for static assets
-  event.respondWith(
-    caches.match(event.request).then(function (cached) {
-      return cached || fetch(event.request).then(function (response) {
-        if (response && response.status === 200 && response.type === 'basic') {
-          var clone = response.clone();
-          caches.open(CACHE_NAME).then(function (cache) { cache.put(event.request, clone); });
+    (async () => {
+      try {
+        if ('caches' in self) {
+          var keys = await caches.keys();
+          await Promise.all(keys.map(function (k) { return caches.delete(k); }));
         }
-        return response;
-      });
-    })
+        await self.registration.unregister();
+        var clients = await self.clients.matchAll({ type: 'window' });
+        clients.forEach(function (c) {
+          // navigate forces a clean reload that re-fetches everything
+          if (c && c.navigate) c.navigate(c.url).catch(function () {});
+        });
+      } catch (e) { /* swallow */ }
+    })()
   );
 });
+
+// Pass-through: never serve anything from cache. Any fetch is just a
+// network request (effectively, no SW interception).
+self.addEventListener('fetch', function () { /* noop */ });
