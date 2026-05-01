@@ -1,0 +1,17 @@
+{
+  "name": "omnicode-portfolio",
+  "version": "1.0.0",
+  "description": "OmniCode Studio portfolio site (static, GitHub Pages) + bundled renome/clemantin demos",
+  "private": true,
+  "scripts": {
+    "build:demos": "node scripts/build-demos.js",
+    "build:renome": "node scripts/build-demos.js renome",
+    "build:clemantin": "node scripts/build-demos.js clemantin",
+    "serve": "npx --yes http-server -c-1 -p 8080"
+  },
+  "devDependencies": {
+    "better-sqlite3": "^11.10.0",
+    "ejs": "^3.1.10",
+    "sharp": "^0.33.5"
+  }
+}
