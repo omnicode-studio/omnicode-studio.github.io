@@ -1,0 +1,184 @@
+{
+  "ru": {
+    "nav": {
+      "home": "Главная",
+      "about": "О нас",
+      "services": "Услуги",
+      "works": "Наши работы",
+      "publications": "Публикации",
+      "projects": "Проекты домов",
+      "calculator": "Калькулятор",
+      "contacts": "Контакты"
+    },
+    "hero": [
+      {
+        "title": "Строительство домов под ключ",
+        "subtitle": "Проектирование, строительство и реконструкция зданий любой сложности в Молдове",
+        "btn": "Оставить заявку",
+        "btn2": "Наши работы"
+      },
+      {
+        "title": "Проектирование и строительство",
+        "subtitle": "Индивидуальные и типовые проекты домов. Полный цикл строительных работ",
+        "btn": "Узнать больше",
+        "btn2": "Проекты домов"
+      },
+      {
+        "title": "Реконструкция зданий",
+        "subtitle": "Профессиональная реконструкция и реновация зданий с гарантией качества",
+        "btn": "Связаться с нами",
+        "btn2": "О компании"
+      }
+    ],
+    "stats": {
+      "projects": "завершённых проектов",
+      "specialists": "специалистов",
+      "partners": "партнёров",
+      "awards": "наград"
+    },
+    "aboutTag": "О компании",
+    "aboutTitle": "CLEMANTIN S.R.L.",
+    "aboutAccent": "Строительство под ключ",
+    "process": {
+      "tag": "Как мы работаем",
+      "title": "Этапы строительства",
+      "desc": "От идеи до сдачи готового объекта — мы сопровождаем проект на каждом этапе"
+    },
+    "portfolio": {
+      "tag": "Портфолио",
+      "title": "Наши работы",
+      "desc": "Реализованные проекты строительства и отделки в Молдове",
+      "all": "Все",
+      "interior": "Внутренняя отделка",
+      "construction": "Строительство",
+      "facade": "Фасады",
+      "renovation": "Реновация",
+      "more": "Все работы"
+    },
+    "cta": {
+      "title": "Готовы начать проект?",
+      "desc": "Свяжитесь с нами для бесплатной консультации",
+      "btn": "Оставить заявку"
+    },
+    "contact": {
+      "tag": "Контакты",
+      "title": "Свяжитесь с нами",
+      "name": "Ваше имя",
+      "phone": "Телефон",
+      "email": "Email",
+      "message": "Сообщение",
+      "send": "Отправить заявку"
+    },
+    "footer": {
+      "about": "О компании",
+      "links": "Полезные ссылки",
+      "contactTitle": "Контакты",
+      "rights": "Все права защищены",
+      "desc": "CLEMANTIN S.R.L. — строительная компания, оказывающая полный спектр услуг в области строительства на рынке Молдовы с 1999 года."
+    },
+    "project": {
+      "investor": "Инвестор",
+      "date": "Дата",
+      "location": "Локация",
+      "category": "Категория",
+      "description": "Описание",
+      "relatedTitle": "Другие проекты",
+      "backToPortfolio": "Все работы"
+    },
+    "breadcrumb": {
+      "home": "Главная",
+      "works": "Наши работы"
+    }
+  },
+  "ro": {
+    "nav": {
+      "home": "Principala",
+      "about": "Despre companie",
+      "services": "Servicii",
+      "works": "Proiectele noastre",
+      "publications": "Publicații",
+      "projects": "Proiecte de case",
+      "calculator": "Calculator",
+      "contacts": "Contacte"
+    },
+    "hero": [
+      {
+        "title": "Construcții la cheie",
+        "subtitle": "Proiectarea, construcția și reconstrucția clădirilor de orice complexitate în Moldova",
+        "btn": "Trimite cerere",
+        "btn2": "Proiectele noastre"
+      },
+      {
+        "title": "Proiectare și construcție",
+        "subtitle": "Proiecte individuale și standard de case. Ciclul complet de lucrări de construcție",
+        "btn": "Aflați mai multe",
+        "btn2": "Proiecte de case"
+      },
+      {
+        "title": "Reconstrucția clădirilor",
+        "subtitle": "Reconstrucția profesională și renovarea clădirilor cu garanția calității",
+        "btn": "Contactați-ne",
+        "btn2": "Despre companie"
+      }
+    ],
+    "stats": {
+      "projects": "proiecte finalizate",
+      "specialists": "specialiști",
+      "partners": "parteneri",
+      "awards": "premii"
+    },
+    "aboutTag": "Despre companie",
+    "aboutTitle": "CLEMANTIN S.R.L.",
+    "aboutAccent": "Construcții la cheie",
+    "process": {
+      "tag": "Cum lucrăm",
+      "title": "Etapele construcției",
+      "desc": "De la idee până la livrarea obiectului finit — însoțim proiectul la fiecare etapă"
+    },
+    "portfolio": {
+      "tag": "Portofoliu",
+      "title": "Proiectele noastre",
+      "desc": "Proiecte realizate de construcții și finisare în Moldova",
+      "all": "Toate",
+      "interior": "Finisare interioară",
+      "construction": "Construcții",
+      "facade": "Fațade",
+      "renovation": "Renovare",
+      "more": "Toate lucrările"
+    },
+    "cta": {
+      "title": "Sunteți gata să începeți proiectul?",
+      "desc": "Contactați-ne pentru o consultație gratuită",
+      "btn": "Trimite cerere"
+    },
+    "contact": {
+      "tag": "Contacte",
+      "title": "Contactați-ne",
+      "name": "Numele dvs.",
+      "phone": "Telefon",
+      "email": "Email",
+      "message": "Mesaj",
+      "send": "Trimite cererea"
+    },
+    "footer": {
+      "about": "Despre companie",
+      "links": "Linkuri utile",
+      "contactTitle": "Contacte",
+      "rights": "Toate drepturile rezervate",
+      "desc": "CLEMANTIN S.R.L. — companie de construcții care oferă o gamă completă de servicii pe piața Moldovei din 1999."
+    },
+    "project": {
+      "investor": "Investitor",
+      "date": "Data",
+      "location": "Locație",
+      "category": "Categorie",
+      "description": "Descriere",
+      "relatedTitle": "Alte proiecte",
+      "backToPortfolio": "Toate lucrările"
+    },
+    "breadcrumb": {
+      "home": "Principala",
+      "works": "Proiectele noastre"
+    }
+  }
+}

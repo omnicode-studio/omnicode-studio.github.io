@@ -1,0 +1,301 @@
+[
+  {
+    "slug": "vnutrennyaya-otdelka-pomeshhenij",
+    "title": {
+      "ru": "Внутренняя отделка помещений",
+      "ro": "Finisarea interioară a încăperilor"
+    },
+    "category": {
+      "ru": "Внутренняя отделка",
+      "ro": "Finisare interioară"
+    },
+    "catKey": "interior",
+    "date": "11 августа 2021",
+    "location": "Молдова",
+    "investor": "Clemantin",
+    "description": {
+      "ru": "Внутренняя отделка стен, потолков, пола. Компания CLEMANTIN выполняет полный комплекс работ по внутренней отделке помещений любой сложности: штукатурка, шпаклёвка, покраска, укладка плитки, монтаж гипсокартона, устройство полов.",
+      "ro": "Finisarea interioară a pereților, tavanelor, podelelor. Compania CLEMANTIN efectuează un complex complet de lucrări de finisare interioară de orice complexitate."
+    },
+    "images": [
+      "/images/portfolio/005-1-480x480.jpg"
+    ],
+    "thumb": "/images/portfolio/005-1-480x480.jpg"
+  },
+  {
+    "slug": "otdelka-sten-potolkov-pola",
+    "title": {
+      "ru": "Отделка стен, потолков, пола",
+      "ro": "Finisarea pereților, tavanelor, podelelor"
+    },
+    "category": {
+      "ru": "Внутренняя отделка",
+      "ro": "Finisare interioară"
+    },
+    "catKey": "interior",
+    "date": "11 августа 2021",
+    "location": "Молдова",
+    "investor": "Clemantin",
+    "description": {
+      "ru": "Профессиональная отделка стен, потолков и полов с использованием современных материалов. Мы обеспечиваем высокое качество работ и соблюдение сроков на каждом этапе.",
+      "ro": "Finisarea profesională a pereților, tavanelor și podelelor cu utilizarea materialelor moderne."
+    },
+    "images": [
+      "/images/portfolio/004-1-480x480.jpg"
+    ],
+    "thumb": "/images/portfolio/004-1-480x480.jpg"
+  },
+  {
+    "slug": "vnutrennyaya-otdelka-pod-klyuch",
+    "title": {
+      "ru": "Внутренняя отделка под ключ",
+      "ro": "Finisare interioară la cheie"
+    },
+    "category": {
+      "ru": "Внутренняя отделка",
+      "ro": "Finisare interioară"
+    },
+    "catKey": "interior",
+    "date": "11 августа 2021",
+    "location": "Молдова",
+    "investor": "Clemantin",
+    "description": {
+      "ru": "Комплексная внутренняя отделка помещений под ключ: от черновых работ до финишного покрытия. Работаем с жилыми и коммерческими объектами по всей Молдове.",
+      "ro": "Finisarea interioară complexă la cheie: de la lucrări brute până la acoperirea finală."
+    },
+    "images": [
+      "/images/portfolio/002-1-480x480.jpg"
+    ],
+    "thumb": "/images/portfolio/002-1-480x480.jpg"
+  },
+  {
+    "slug": "otdelka-pomeshhenij",
+    "title": {
+      "ru": "Отделка помещений",
+      "ro": "Finisarea încăperilor"
+    },
+    "category": {
+      "ru": "Внутренняя отделка",
+      "ro": "Finisare interioară"
+    },
+    "catKey": "interior",
+    "date": "11 августа 2021",
+    "location": "Молдова",
+    "investor": "Clemantin",
+    "description": {
+      "ru": "Качественная отделка помещений различного назначения. Используем только сертифицированные материалы и проверенные технологии.",
+      "ro": "Finisarea calitativă a încăperilor de diferite destinații."
+    },
+    "images": [
+      "/images/portfolio/001-480x480.jpg"
+    ],
+    "thumb": "/images/portfolio/001-480x480.jpg"
+  },
+  {
+    "slug": "stroitelstvo-i-montazh-krysh",
+    "title": {
+      "ru": "Строительство и монтаж крыш",
+      "ro": "Construcția și montajul acoperișurilor"
+    },
+    "category": {
+      "ru": "Строительство",
+      "ro": "Construcții"
+    },
+    "catKey": "construction",
+    "date": "11 августа 2021",
+    "location": "Молдова",
+    "investor": "Clemantin",
+    "description": {
+      "ru": "Строительство и монтаж крыш любой сложности. Выполняем работы по устройству стропильной системы, гидроизоляции, утеплению и монтажу кровельных материалов.",
+      "ro": "Construcția și montajul acoperișurilor de orice complexitate."
+    },
+    "images": [
+      "/images/portfolio/009-480x480.jpg"
+    ],
+    "thumb": "/images/portfolio/009-480x480.jpg"
+  },
+  {
+    "slug": "stroitelstvo-krysh",
+    "title": {
+      "ru": "Строительство крыш",
+      "ro": "Construcția acoperișurilor"
+    },
+    "category": {
+      "ru": "Строительство",
+      "ro": "Construcții"
+    },
+    "catKey": "construction",
+    "date": "11 августа 2021",
+    "location": "Молдова",
+    "investor": "Clemantin",
+    "description": {
+      "ru": "Профессиональное строительство крыш с гарантией качества. Работаем с металлочерепицей, профнастилом, мягкой кровлей и другими материалами.",
+      "ro": "Construcția profesională a acoperișurilor cu garanția calității."
+    },
+    "images": [
+      "/images/portfolio/008-480x480.jpg"
+    ],
+    "thumb": "/images/portfolio/008-480x480.jpg"
+  },
+  {
+    "slug": "professionalnaya-otdelka-fasada",
+    "title": {
+      "ru": "Профессиональная отделка фасада",
+      "ro": "Finisarea profesională a fațadei"
+    },
+    "category": {
+      "ru": "Фасады",
+      "ro": "Fațade"
+    },
+    "catKey": "facade",
+    "date": "11 августа 2021",
+    "location": "Молдова",
+    "investor": "Clemantin",
+    "description": {
+      "ru": "Профессиональная отделка фасадов зданий с применением современных технологий и материалов. Утепление, декоративная штукатурка, облицовка.",
+      "ro": "Finisarea profesională a fațadelor clădirilor cu aplicarea tehnologiilor și materialelor moderne."
+    },
+    "images": [
+      "/images/portfolio/007-480x480.jpg"
+    ],
+    "thumb": "/images/portfolio/007-480x480.jpg"
+  },
+  {
+    "slug": "finishnaya-otdelka-fasada",
+    "title": {
+      "ru": "Финишная отделка фасада",
+      "ro": "Finisarea finală a fațadei"
+    },
+    "category": {
+      "ru": "Фасады",
+      "ro": "Fațade"
+    },
+    "catKey": "facade",
+    "date": "11 августа 2021",
+    "location": "Молдова",
+    "investor": "Clemantin",
+    "description": {
+      "ru": "Финишная отделка фасада — завершающий этап, придающий зданию эстетичный и завершённый вид. Покраска, нанесение декоративных покрытий.",
+      "ro": "Finisarea finală a fațadei — etapa finală care conferă clădirii un aspect estetic și complet."
+    },
+    "images": [
+      "/images/portfolio/006-480x480.jpg"
+    ],
+    "thumb": "/images/portfolio/006-480x480.jpg"
+  },
+  {
+    "slug": "preobrazhenie-vneshnego-vida-zdaniya",
+    "title": {
+      "ru": "Преображение внешнего вида здания",
+      "ro": "Transformarea aspectului exterior al clădirii"
+    },
+    "category": {
+      "ru": "Фасады",
+      "ro": "Fațade"
+    },
+    "catKey": "facade",
+    "date": "11 августа 2021",
+    "location": "Молдова",
+    "investor": "Clemantin",
+    "description": {
+      "ru": "Комплексное преображение внешнего вида здания: ремонт и обновление фасада, замена элементов декора, утепление.",
+      "ro": "Transformarea complexă a aspectului exterior al clădirii."
+    },
+    "images": [
+      "/images/portfolio/005-480x480.jpg"
+    ],
+    "thumb": "/images/portfolio/005-480x480.jpg"
+  },
+  {
+    "slug": "renovaciya-fasada",
+    "title": {
+      "ru": "Реновация фасада",
+      "ro": "Renovarea fațadei"
+    },
+    "category": {
+      "ru": "Реновация",
+      "ro": "Renovare"
+    },
+    "catKey": "renovation",
+    "date": "11 августа 2021",
+    "location": "Молдова",
+    "investor": "Clemantin",
+    "description": {
+      "ru": "Полная реновация фасада здания: демонтаж старых покрытий, утепление, нанесение новых отделочных материалов.",
+      "ro": "Renovarea completă a fațadei clădirii."
+    },
+    "images": [
+      "/images/portfolio/004-480x480.jpg"
+    ],
+    "thumb": "/images/portfolio/004-480x480.jpg"
+  },
+  {
+    "slug": "otdelka-fasada-s-utepleniem",
+    "title": {
+      "ru": "Отделка фасада с утеплением",
+      "ro": "Finisarea fațadei cu izolație termică"
+    },
+    "category": {
+      "ru": "Реновация",
+      "ro": "Renovare"
+    },
+    "catKey": "renovation",
+    "date": "11 августа 2021",
+    "location": "Молдова",
+    "investor": "Clemantin",
+    "description": {
+      "ru": "Работы по отделке фасадов зданий с одновременным утеплением. Повышение энергоэффективности и улучшение внешнего вида.",
+      "ro": "Lucrări de finisare a fațadelor clădirilor cu izolație termică simultană."
+    },
+    "images": [
+      "/images/portfolio/003-480x480.jpg"
+    ],
+    "thumb": "/images/portfolio/003-480x480.jpg"
+  },
+  {
+    "slug": "gotovyj-fasad-zdaniya",
+    "title": {
+      "ru": "Готовый фасад здания",
+      "ro": "Fațada finalizată a clădirii"
+    },
+    "category": {
+      "ru": "Реновация",
+      "ro": "Renovare"
+    },
+    "catKey": "renovation",
+    "date": "11 августа 2021",
+    "location": "Молдова",
+    "investor": "Clemantin",
+    "description": {
+      "ru": "Завершённый проект по отделке фасада здания. Результат комплексной работы команды CLEMANTIN.",
+      "ro": "Proiect finalizat de finisare a fațadei clădirii."
+    },
+    "images": [
+      "/images/portfolio/002-480x480.jpg"
+    ],
+    "thumb": "/images/portfolio/002-480x480.jpg"
+  },
+  {
+    "slug": "otdelka-fasada",
+    "title": {
+      "ru": "Отделка фасада",
+      "ro": "Finisarea fațadei"
+    },
+    "category": {
+      "ru": "Фасады",
+      "ro": "Fațade"
+    },
+    "catKey": "facade",
+    "date": "11 августа 2021",
+    "location": "Молдова",
+    "investor": "Clemantin",
+    "description": {
+      "ru": "Качественная отделка фасада с использованием современных материалов и технологий.",
+      "ro": "Finisarea calitativă a fațadei cu utilizarea materialelor și tehnologiilor moderne."
+    },
+    "images": [
+      "/images/portfolio/009-1.jpg"
+    ],
+    "thumb": "/images/portfolio/009-1.jpg"
+  }
+]

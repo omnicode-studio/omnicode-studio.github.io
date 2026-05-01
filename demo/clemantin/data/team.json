@@ -1,0 +1,66 @@
+[
+  {
+    "name": {
+      "ru": "Григорий Чеботарь",
+      "ro": "Grigore Cebotari"
+    },
+    "role": {
+      "ru": "Генеральный директор",
+      "ro": "Director general"
+    },
+    "exp": {
+      "ru": "25+ лет в строительстве",
+      "ro": "25+ ani în construcții"
+    },
+    "initials": "ГЧ",
+    "color": "#E8740C"
+  },
+  {
+    "name": {
+      "ru": "Александр Мунтян",
+      "ro": "Alexandru Muntean"
+    },
+    "role": {
+      "ru": "Главный инженер",
+      "ro": "Inginer-șef"
+    },
+    "exp": {
+      "ru": "18 лет опыта",
+      "ro": "18 ani de experiență"
+    },
+    "initials": "АМ",
+    "color": "#2563EB"
+  },
+  {
+    "name": {
+      "ru": "Виктория Руссу",
+      "ro": "Victoria Russu"
+    },
+    "role": {
+      "ru": "Архитектор-проектировщик",
+      "ro": "Arhitect-proiectant"
+    },
+    "exp": {
+      "ru": "12 лет в проектировании",
+      "ro": "12 ani în proiectare"
+    },
+    "initials": "ВР",
+    "color": "#059669"
+  },
+  {
+    "name": {
+      "ru": "Дмитрий Козак",
+      "ro": "Dumitru Cozac"
+    },
+    "role": {
+      "ru": "Начальник строительного участка",
+      "ro": "Șef de șantier"
+    },
+    "exp": {
+      "ru": "15 лет на объектах",
+      "ro": "15 ani pe șantiere"
+    },
+    "initials": "ДК",
+    "color": "#7C3AED"
+  }
+]

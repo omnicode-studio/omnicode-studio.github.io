@@ -1,0 +1,226 @@
+[
+  {
+    "slug": "stroitelstvo-domov",
+    "icon": "home",
+    "title": {
+      "ru": "Строительство домов",
+      "ro": "Construcția caselor"
+    },
+    "desc": {
+      "ru": "Строительство частных жилых домов под ключ из современных материалов. От фундамента до финишной отделки с полным контролем качества.",
+      "ro": "Construcția caselor particulare la cheie din materiale moderne. De la fundație până la finisare cu control complet al calității."
+    },
+    "subs": {
+      "ru": [
+        "Каркасно-каменное строительство",
+        "Дома из газобетона и кирпича",
+        "Коттеджи и таунхаусы",
+        "Монолитное строительство",
+        "Дома с мансардой"
+      ],
+      "ro": [
+        "Construcție din cadru și piatră",
+        "Case din beton celular și cărămidă",
+        "Vile și case în rând",
+        "Construcție monolitică",
+        "Case cu mansardă"
+      ]
+    }
+  },
+  {
+    "slug": "remont-i-rekonstrukciya",
+    "icon": "refresh",
+    "title": {
+      "ru": "Ремонт и реконструкция",
+      "ro": "Reparații și reconstrucție"
+    },
+    "desc": {
+      "ru": "Комплексная и частичная реконструкция зданий любого типа. Модернизация, усиление конструкций, перепланировка помещений.",
+      "ro": "Reconstrucția complexă și parțială a clădirilor de orice tip. Modernizare, consolidare a construcțiilor, replanificare."
+    },
+    "subs": {
+      "ru": [
+        "Комплексная реконструкция",
+        "Частичная реконструкция",
+        "Перепланировка помещений",
+        "Усиление фундамента",
+        "Надстройка этажей"
+      ],
+      "ro": [
+        "Reconstrucție complexă",
+        "Reconstrucție parțială",
+        "Replanificarea spațiilor",
+        "Consolidarea fundației",
+        "Supraetajare"
+      ]
+    }
+  },
+  {
+    "slug": "proektirovanie",
+    "icon": "blueprint",
+    "title": {
+      "ru": "Проектирование",
+      "ro": "Proiectare"
+    },
+    "desc": {
+      "ru": "Разработка индивидуальных и типовых проектов домов и коммерческих зданий. Полный пакет проектной документации.",
+      "ro": "Elaborarea proiectelor individuale și standard pentru case și clădiri comerciale. Pachet complet de documentație."
+    },
+    "subs": {
+      "ru": [
+        "Индивидуальные проекты",
+        "Типовые проекты домов",
+        "Архитектурные решения",
+        "Инженерные разделы",
+        "Разрешительная документация"
+      ],
+      "ro": [
+        "Proiecte individuale",
+        "Proiecte standard de case",
+        "Soluții arhitecturale",
+        "Secțiuni de inginerie",
+        "Documentație de autorizare"
+      ]
+    }
+  },
+  {
+    "slug": "fasadnye-raboty",
+    "icon": "facade",
+    "title": {
+      "ru": "Фасадные работы",
+      "ro": "Lucrări de fațadă"
+    },
+    "desc": {
+      "ru": "Утепление и отделка фасадов зданий. Декоративная штукатурка, облицовка, вентилируемые фасады, гидрофобизация.",
+      "ro": "Izolarea și finisarea fațadelor clădirilor. Tencuială decorativă, placare, fațade ventilate, hidrofobizare."
+    },
+    "subs": {
+      "ru": [
+        "Утепление фасадов",
+        "Декоративная штукатурка",
+        "Облицовка камнем/плиткой",
+        "Вентилируемые фасады",
+        "Гидрофобизация"
+      ],
+      "ro": [
+        "Izolarea fațadelor",
+        "Tencuială decorativă",
+        "Placare cu piatră/gresie",
+        "Fațade ventilate",
+        "Hidrofobizare"
+      ]
+    }
+  },
+  {
+    "slug": "vnutrennyaya-otdelka",
+    "icon": "interior",
+    "title": {
+      "ru": "Внутренняя отделка",
+      "ro": "Finisare interioară"
+    },
+    "desc": {
+      "ru": "Полный комплекс внутренних отделочных работ: штукатурка, шпаклёвка, покраска, укладка плитки, монтаж гипсокартона.",
+      "ro": "Complex complet de lucrări de finisare interioară: tencuială, șpaclu, vopsire, montaj gresie, montaj gips-carton."
+    },
+    "subs": {
+      "ru": [
+        "Штукатурка и шпаклёвка",
+        "Покраска и обои",
+        "Укладка плитки",
+        "Монтаж гипсокартона",
+        "Устройство полов"
+      ],
+      "ro": [
+        "Tencuială și șpaclu",
+        "Vopsire și tapet",
+        "Montaj gresie/faianță",
+        "Montaj gips-carton",
+        "Amenajarea pardoselilor"
+      ]
+    }
+  },
+  {
+    "slug": "landshaftnye-raboty",
+    "icon": "landscape",
+    "title": {
+      "ru": "Ландшафтные работы",
+      "ro": "Lucrări de peisagistică"
+    },
+    "desc": {
+      "ru": "Благоустройство территории, земляные работы, устройство дренажных систем, мощение, озеленение участков.",
+      "ro": "Amenajarea teritoriului, lucrări de terasament, sisteme de drenaj, pavare, amenajare peisagistică."
+    },
+    "subs": {
+      "ru": [
+        "Земляные работы",
+        "Дренажные системы",
+        "Мощение и дорожки",
+        "Подпорные стены",
+        "Ограждения и заборы"
+      ],
+      "ro": [
+        "Lucrări de terasament",
+        "Sisteme de drenaj",
+        "Pavare și alei",
+        "Ziduri de sprijin",
+        "Garduri și împrejmuiri"
+      ]
+    }
+  },
+  {
+    "slug": "inzhenernye-sistemy",
+    "icon": "engineering",
+    "title": {
+      "ru": "Инженерные системы",
+      "ro": "Sisteme de inginerie"
+    },
+    "desc": {
+      "ru": "Проектирование и монтаж инженерных коммуникаций: водоснабжение, канализация, отопление, электрика, вентиляция.",
+      "ro": "Proiectarea și montajul comunicațiilor de inginerie: alimentare cu apă, canalizare, încălzire, electricitate, ventilație."
+    },
+    "subs": {
+      "ru": [
+        "Водоснабжение и канализация",
+        "Отопление",
+        "Электромонтаж",
+        "Вентиляция и кондиционирование",
+        "Газоснабжение"
+      ],
+      "ro": [
+        "Alimentare cu apă și canalizare",
+        "Încălzire",
+        "Montaj electric",
+        "Ventilație și climatizare",
+        "Alimentare cu gaz"
+      ]
+    }
+  },
+  {
+    "slug": "krovelnye-raboty",
+    "icon": "roof",
+    "title": {
+      "ru": "Кровельные работы",
+      "ro": "Lucrări de acoperiș"
+    },
+    "desc": {
+      "ru": "Монтаж и ремонт кровли любого типа. Стропильные системы, гидроизоляция, утепление, установка водостоков.",
+      "ro": "Montajul și reparația acoperișurilor de orice tip. Sisteme de căpriori, hidroizolație, izolație termică, jgheaburi."
+    },
+    "subs": {
+      "ru": [
+        "Металлочерепица",
+        "Мягкая кровля",
+        "Профнастил",
+        "Гидроизоляция кровли",
+        "Водосточные системы"
+      ],
+      "ro": [
+        "Țiglă metalică",
+        "Acoperiș moale",
+        "Tablă cutată",
+        "Hidroizolația acoperișului",
+        "Sisteme pluviale"
+      ]
+    }
+  }
+]

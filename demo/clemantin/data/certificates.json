@@ -1,0 +1,46 @@
+[
+  {
+    "title": {
+      "ru": "Лицензия на строительство",
+      "ro": "Licență de construcție"
+    },
+    "desc": {
+      "ru": "Государственная лицензия на выполнение строительных работ всех категорий сложности",
+      "ro": "Licență de stat pentru executarea lucrărilor de construcție de toate categoriile"
+    },
+    "icon": "license"
+  },
+  {
+    "title": {
+      "ru": "Сертификат качества",
+      "ro": "Certificat de calitate"
+    },
+    "desc": {
+      "ru": "Соответствие международным стандартам качества строительных работ",
+      "ro": "Conformitate cu standardele internaționale de calitate a lucrărilor de construcție"
+    },
+    "icon": "certificate"
+  },
+  {
+    "title": {
+      "ru": "Гарантия 5 лет",
+      "ro": "Garanție 5 ani"
+    },
+    "desc": {
+      "ru": "Гарантия на все виды строительных работ — 5 лет, на отделочные — 2 года",
+      "ro": "Garanție pentru toate lucrările de construcție — 5 ani, finisare — 2 ani"
+    },
+    "icon": "shield"
+  },
+  {
+    "title": {
+      "ru": "Страхование объектов",
+      "ro": "Asigurarea obiectelor"
+    },
+    "desc": {
+      "ru": "Все строительные объекты застрахованы на период выполнения работ",
+      "ro": "Toate obiectele de construcție sunt asigurate pe perioada executării lucrărilor"
+    },
+    "icon": "insurance"
+  }
+]

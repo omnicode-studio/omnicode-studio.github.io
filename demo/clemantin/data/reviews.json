@@ -1,0 +1,92 @@
+[
+  {
+    "name": {
+      "ru": "Андрей М.",
+      "ro": "Andrei M."
+    },
+    "project": {
+      "ru": "Строительство дома",
+      "ro": "Construcția casei"
+    },
+    "stars": 5,
+    "text": {
+      "ru": "Построили дом площадью 180 м² за 8 месяцев. Качество на высшем уровне, все сроки соблюдены. Команда профессионалов, рекомендую!",
+      "ro": "Au construit o casă de 180 m² în 8 luni. Calitate la cel mai înalt nivel, toate termenele respectate. O echipă de profesioniști, recomand!"
+    }
+  },
+  {
+    "name": {
+      "ru": "Елена К.",
+      "ro": "Elena C."
+    },
+    "project": {
+      "ru": "Реконструкция здания",
+      "ro": "Reconstrucția clădirii"
+    },
+    "stars": 5,
+    "text": {
+      "ru": "Обратились для реконструкции старого здания под офис. Работа выполнена отлично, даже лучше, чем ожидали. Отдельное спасибо за терпение и внимание к деталям.",
+      "ro": "Am apelat pentru reconstrucția unei clădiri vechi în birou. Lucrarea a fost executată excelent, chiar mai bine decât ne așteptam."
+    }
+  },
+  {
+    "name": {
+      "ru": "Виктор Д.",
+      "ro": "Victor D."
+    },
+    "project": {
+      "ru": "Фасадные работы",
+      "ro": "Lucrări de fațadă"
+    },
+    "stars": 5,
+    "text": {
+      "ru": "Заказали утепление и отделку фасада. Работа сделана аккуратно и в срок. Зимой сразу почувствовали разницу в расходах на отопление.",
+      "ro": "Am comandat izolarea și finisarea fațadei. Lucrarea a fost făcută cu grijă și la timp. Iarna am simțit imediat diferența la costurile de încălzire."
+    }
+  },
+  {
+    "name": {
+      "ru": "Марина С.",
+      "ro": "Marina S."
+    },
+    "project": {
+      "ru": "Внутренняя отделка",
+      "ro": "Finisare interioară"
+    },
+    "stars": 5,
+    "text": {
+      "ru": "Отделка квартиры под ключ — от проекта до мебели. Всё продумано до мелочей. Мастера работают чисто и качественно. Очень довольна результатом!",
+      "ro": "Finisarea apartamentului la cheie — de la proiect până la mobilier. Totul este gândit până la cel mai mic detaliu. Sunt foarte mulțumită!"
+    }
+  },
+  {
+    "name": {
+      "ru": "Игорь П.",
+      "ro": "Igor P."
+    },
+    "project": {
+      "ru": "Проектирование дома",
+      "ro": "Proiectarea casei"
+    },
+    "stars": 5,
+    "text": {
+      "ru": "Заказали индивидуальный проект дома. Архитектор учёл все наши пожелания, предложил оптимальные решения. Проект готов за 3 недели.",
+      "ro": "Am comandat un proiect individual de casă. Arhitectul a ținut cont de toate dorințele noastre. Proiectul a fost gata în 3 săptămâni."
+    }
+  },
+  {
+    "name": {
+      "ru": "Наталья В.",
+      "ro": "Natalia V."
+    },
+    "project": {
+      "ru": "Строительство коттеджа",
+      "ro": "Construcția vilei"
+    },
+    "stars": 5,
+    "text": {
+      "ru": "Коттедж 250 м² с гаражом и террасой. Clemantin вели проект от начала до конца. Качество материалов и работ превзошло ожидания. Спасибо огромное!",
+      "ro": "Vilă de 250 m² cu garaj și terasă. Clemantin au condus proiectul de la început până la sfârșit. Calitatea materialelor a depășit așteptările."
+    }
+  }
+]

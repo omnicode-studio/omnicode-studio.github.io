@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0F1923">
+  <title>Контакты — CLEMANTIN (demo)</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="images/logo.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../_demo-frame.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="demo-banner">
+    <span data-i18n="demoBanner.text">Это демо-витрина. Заявки не передаются в реальную компанию.</span>
+    <a href="../../" class="demo-banner__back" data-i18n="demoBanner.back">к портфолио</a>
+  </div>
+
+  <header class="header header--inner" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="images/logo-white.webp" alt="CLEMANTIN" class="header__logo-img">
+      </a>
+      <nav class="header__nav" id="mainNav">
+        <a href="index.html" class="header__nav-link" data-i18n="nav.home">Главная</a>
+        <a href="services.html" class="header__nav-link" data-i18n="nav.services">Услуги</a>
+        <a href="projects.html" class="header__nav-link" data-i18n="nav.projects">Проекты домов</a>
+        <a href="calculator.html" class="header__nav-link" data-i18n="nav.calculator">Калькулятор</a>
+        <a href="contacts.html" class="header__nav-link active" data-i18n="nav.contacts">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <div class="lang-switch">
+          <button class="lang-switch__btn" data-lang="ro">RO</button>
+          <button class="lang-switch__btn active" data-lang="ru">RU</button>
+        </div>
+      </div>
+      <button class="header__burger" id="burgerBtn"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <div class="mobile-nav__header">
+        <span class="mobile-nav__title">CLEMANTIN</span>
+        <button class="mobile-nav__close" id="mobileNavClose">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav__links">
+        <a href="index.html" class="mobile-nav__link" data-i18n="nav.home">Главная</a>
+        <a href="services.html" class="mobile-nav__link" data-i18n="nav.services">Услуги</a>
+        <a href="projects.html" class="mobile-nav__link" data-i18n="nav.projects">Проекты домов</a>
+        <a href="calculator.html" class="mobile-nav__link" data-i18n="nav.calculator">Калькулятор</a>
+        <a href="contacts.html" class="mobile-nav__link active" data-i18n="nav.contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" style="padding-top: calc(var(--df-banner-h, 32px) + 80px); padding-bottom: 80px;">
+    <div class="container">
+      <div class="page-head">
+        <h1 class="page-title" data-i18n="contact.title">Свяжитесь с нами</h1>
+      </div>
+
+      <div class="contacts-grid">
+        <div class="contacts-info">
+          <div class="contact-item">
+            <div class="contact-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <span class="contact-item__label">Адрес</span>
+              <p>мун. Бельцы, пр. Победы 90A, Молдова</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div>
+              <span class="contact-item__label" data-i18n="contact.phone">Телефон</span>
+              <p><a href="tel:+373694666669">+373 694 66 669</a></p>
+              <p><a href="tel:+373691436622">+373 691 43 622</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div>
+              <span class="contact-item__label" data-i18n="contact.email">Email</span>
+              <p><a href="mailto:clemantin@mail.ru">clemantin@mail.ru</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div>
+              <span class="contact-item__label">Часы работы</span>
+              <p>Пн — Пт: 08:00 — 17:00</p>
+              <p>Сб — Вс: выходной</p>
+            </div>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <h2 class="contact-form__title">Оставить заявку</h2>
+          <div class="form-group">
+            <label class="form-label" data-i18n="contact.name">Ваше имя</label>
+            <input type="text" name="name" required class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="contact.phone">Телефон</label>
+            <input type="tel" name="phone" required placeholder="+373..." class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="contact.email">Email</label>
+            <input type="email" name="email" class="form-input">
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="contact.message">Сообщение</label>
+            <textarea name="message" rows="4" class="form-textarea"></textarea>
+          </div>
+          <button type="submit" class="btn btn--accent btn--full" data-i18n="contact.send">Отправить заявку</button>
+          <p class="contact-form__demo-note">Демо-режим: заявка уйдёт в Telegram-бот разработчика, не в реальную компанию.</p>
+        </form>
+      </div>
+
+      <div class="contacts-map">
+        <iframe src="https://maps.google.com/maps?q=B%C4%83l%C8%9Bi,+Moldova&t=&z=12&ie=UTF8&iwloc=&output=embed" width="100%" height="380" style="border:0;border-radius:12px" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <p>&copy; 1999—<span id="copyrightYear">2026</span> CLEMANTIN S.R.L. — Demo by <a href="../../">OmniCode Studio</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
+  <div class="toast" id="toast"><span class="toast__text" id="toastText"></span></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

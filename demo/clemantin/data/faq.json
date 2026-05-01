@@ -1,0 +1,82 @@
+[
+  {
+    "q": {
+      "ru": "Сколько стоит строительство дома?",
+      "ro": "Cât costă construcția unei case?"
+    },
+    "a": {
+      "ru": "Стоимость зависит от площади, этажности, материалов и уровня отделки. Ориентировочно: от €250/м² в «красном» варианте до €650/м² «под ключ». Точный расчёт — после составления сметы. Воспользуйтесь нашим <a href=\"/kalkulyator\">калькулятором</a> для предварительной оценки.",
+      "ro": "Costul depinde de suprafață, etajitate, materiale și nivelul de finisare. Aproximativ: de la €250/m² în varianta „roșie\" până la €650/m² „la cheie\". Calculul exact — după deviz. Folosiți <a href=\"/kalkulyator\">calculatorul</a> nostru."
+    }
+  },
+  {
+    "q": {
+      "ru": "Какие сроки строительства?",
+      "ro": "Care sunt termenele de construcție?"
+    },
+    "a": {
+      "ru": "Средние сроки: одноэтажный дом — 4-6 месяцев, двухэтажный — 6-10 месяцев, реконструкция — 2-4 месяца. Точные сроки фиксируются в договоре и зависят от сложности проекта и погодных условий.",
+      "ro": "Termene medii: casă cu un etaj — 4-6 luni, cu două etaje — 6-10 luni, reconstrucție — 2-4 luni. Termenele exacte sunt fixate în contract."
+    }
+  },
+  {
+    "q": {
+      "ru": "Предоставляете ли вы гарантию?",
+      "ro": "Oferiți garanție?"
+    },
+    "a": {
+      "ru": "Да, мы предоставляем гарантию 5 лет на все строительные работы и 2 года на отделочные работы. Гарантийные обязательства прописываются в договоре.",
+      "ro": "Da, oferim garanție de 5 ani pentru toate lucrările de construcție și 2 ani pentru lucrările de finisare. Obligațiile de garanție sunt specificate în contract."
+    }
+  },
+  {
+    "q": {
+      "ru": "Работаете ли вы за пределами Бельц?",
+      "ro": "Lucrați în afara Bălțiului?"
+    },
+    "a": {
+      "ru": "Да, мы работаем по всему северу и центру Молдовы: Бельцы, Кишинёв, Единцы, Сорока, Флорешты, Дрокия и другие населённые пункты. Выезд на объект для оценки — бесплатный.",
+      "ro": "Da, lucrăm în tot nordul și centrul Moldovei: Bălți, Chișinău, Edineț, Soroca, Florești, Drochia. Deplasarea pentru evaluare — gratuită."
+    }
+  },
+  {
+    "q": {
+      "ru": "Как происходит оплата?",
+      "ro": "Cum se efectuează plata?"
+    },
+    "a": {
+      "ru": "Оплата поэтапная: аванс 30% при подписании договора, далее — по факту выполнения каждого этапа работ. Возможен безналичный расчёт. Все платежи фиксируются документально.",
+      "ro": "Plata se face în etape: avans de 30% la semnarea contractului, apoi — la finalizarea fiecărei etape. Sunt posibile plăți prin transfer bancar."
+    }
+  },
+  {
+    "q": {
+      "ru": "Нужно ли разрешение на строительство?",
+      "ro": "Este necesar permisul de construcție?"
+    },
+    "a": {
+      "ru": "Да, для строительства жилого дома необходимо получить разрешение на строительство (autorizație de construire). Мы помогаем с оформлением всех необходимых документов и получением разрешений.",
+      "ro": "Da, pentru construcția unei case este necesară autorizația de construire. Vă ajutăm cu întocmirea tuturor documentelor necesare."
+    }
+  },
+  {
+    "q": {
+      "ru": "Можно ли внести изменения в проект?",
+      "ro": "Se pot face modificări în proiect?"
+    },
+    "a": {
+      "ru": "Да, на этапе проектирования можно вносить любые изменения. После начала строительства — только те, которые не затрагивают несущие конструкции. Все изменения согласовываются с инженером.",
+      "ro": "Da, în etapa de proiectare pot fi făcute orice modificări. După începerea construcției — doar cele care nu afectează structura de rezistență."
+    }
+  },
+  {
+    "q": {
+      "ru": "Какие материалы вы используете?",
+      "ro": "Ce materiale folosiți?"
+    },
+    "a": {
+      "ru": "Мы используем сертифицированные материалы от проверенных поставщиков: газобетон, кирпич, монолитный бетон, металлоконструкции. Выбор материала обсуждается с клиентом на этапе проектирования.",
+      "ro": "Folosim materiale certificate de la furnizori verificați: beton celular, cărămidă, beton monolit, structuri metalice. Materialul se discută la etapa de proiectare."
+    }
+  }
+]

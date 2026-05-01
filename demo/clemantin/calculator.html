@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0F1923">
+  <title>Калькулятор стоимости — CLEMANTIN (demo)</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="images/logo.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../_demo-frame.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="demo-banner">
+    <span data-i18n="demoBanner.text">Это демо-витрина. Заявки не передаются в реальную компанию.</span>
+    <a href="../../" class="demo-banner__back" data-i18n="demoBanner.back">к портфолио</a>
+  </div>
+
+  <header class="header header--inner" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="images/logo-white.webp" alt="CLEMANTIN" class="header__logo-img">
+      </a>
+      <nav class="header__nav" id="mainNav">
+        <a href="index.html" class="header__nav-link" data-i18n="nav.home">Главная</a>
+        <a href="services.html" class="header__nav-link" data-i18n="nav.services">Услуги</a>
+        <a href="projects.html" class="header__nav-link" data-i18n="nav.projects">Проекты домов</a>
+        <a href="calculator.html" class="header__nav-link active" data-i18n="nav.calculator">Калькулятор</a>
+        <a href="contacts.html" class="header__nav-link" data-i18n="nav.contacts">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <div class="lang-switch">
+          <button class="lang-switch__btn" data-lang="ro">RO</button>
+          <button class="lang-switch__btn active" data-lang="ru">RU</button>
+        </div>
+        <a href="contacts.html" class="btn btn--accent btn--sm header__cta" data-i18n="cta.btn">Оставить заявку</a>
+      </div>
+      <button class="header__burger" id="burgerBtn"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <div class="mobile-nav__header">
+        <span class="mobile-nav__title">CLEMANTIN</span>
+        <button class="mobile-nav__close" id="mobileNavClose">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav__links">
+        <a href="index.html" class="mobile-nav__link" data-i18n="nav.home">Главная</a>
+        <a href="services.html" class="mobile-nav__link" data-i18n="nav.services">Услуги</a>
+        <a href="projects.html" class="mobile-nav__link" data-i18n="nav.projects">Проекты домов</a>
+        <a href="calculator.html" class="mobile-nav__link active" data-i18n="nav.calculator">Калькулятор</a>
+        <a href="contacts.html" class="mobile-nav__link" data-i18n="nav.contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" style="padding-top: calc(var(--df-banner-h, 32px) + 80px); padding-bottom: 80px;">
+    <div class="container">
+      <div class="page-head">
+        <h1 class="page-title" data-i18n="nav.calculator">Калькулятор стоимости</h1>
+        <p class="page-subtitle">Ориентировочный расчёт за минуту. Точную смету дадим после консультации.</p>
+      </div>
+
+      <div class="calc" id="calcRoot">
+        <div class="calc__form">
+          <div class="calc__group">
+            <label class="calc__label">Тип объекта</label>
+            <div class="calc__options" data-param="type">
+              <button class="calc__opt active" data-value="house">Дом</button>
+              <button class="calc__opt" data-value="cottage">Коттедж</button>
+              <button class="calc__opt" data-value="townhouse">Таунхаус</button>
+              <button class="calc__opt" data-value="commercial">Коммерческий</button>
+            </div>
+          </div>
+
+          <div class="calc__group">
+            <label class="calc__label">Этажность</label>
+            <div class="calc__options" data-param="floors">
+              <button class="calc__opt active" data-value="1">1</button>
+              <button class="calc__opt" data-value="2">2</button>
+              <button class="calc__opt" data-value="3">3</button>
+            </div>
+          </div>
+
+          <div class="calc__group">
+            <label class="calc__label">Площадь: <span id="areaValue">120</span> m²</label>
+            <input type="range" id="areaRange" class="calc__range" min="50" max="500" value="120" step="10">
+          </div>
+
+          <div class="calc__group">
+            <label class="calc__label">Стены</label>
+            <div class="calc__options" data-param="walls">
+              <button class="calc__opt active" data-value="aerated">Газобетон</button>
+              <button class="calc__opt" data-value="brick">Кирпич</button>
+              <button class="calc__opt" data-value="frame">Каркас</button>
+              <button class="calc__opt" data-value="monolith">Монолит</button>
+            </div>
+          </div>
+
+          <div class="calc__group">
+            <label class="calc__label">Кровля</label>
+            <div class="calc__options" data-param="roof">
+              <button class="calc__opt active" data-value="metal">Металлочерепица</button>
+              <button class="calc__opt" data-value="soft">Мягкая</button>
+              <button class="calc__opt" data-value="profiled">Профнастил</button>
+            </div>
+          </div>
+
+          <div class="calc__group">
+            <label class="calc__label">Уровень готовности</label>
+            <div class="calc__options" data-param="finish">
+              <button class="calc__opt active" data-value="red">«Красный»</button>
+              <button class="calc__opt" data-value="gray">«Серый»</button>
+              <button class="calc__opt" data-value="white">«Белый»</button>
+              <button class="calc__opt" data-value="turnkey">Под ключ</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="calc__result">
+          <div class="calc__total">
+            <span class="calc__total-label">Итого</span>
+            <span class="calc__total-price" id="totalPrice">€ 0</span>
+          </div>
+          <ul class="calc__breakdown">
+            <li><span>Фундамент</span><span id="priceFoundation">€ 0</span></li>
+            <li><span>Стены и перекрытия</span><span id="priceWalls">€ 0</span></li>
+            <li><span>Кровля</span><span id="priceRoof">€ 0</span></li>
+            <li><span>Отделка и инженерия</span><span id="priceFinish">€ 0</span></li>
+          </ul>
+          <button id="calcRequestBtn" class="btn btn--accent btn--full">Получить точный расчёт</button>
+          <p class="calc__hint">Это ориентировочный расчёт. Финальная стоимость — после выезда инженера.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Calc modal: request form -->
+  <div class="calc-modal" id="calcModal">
+    <div class="calc-modal__overlay" id="calcModalOverlay"></div>
+    <div class="calc-modal__sheet">
+      <button class="calc-modal__close" id="calcModalClose" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h3 class="calc-modal__title">Точный расчёт под ваш проект</h3>
+      <div class="calc-modal__summary" id="calcSummary"></div>
+      <form id="calcForm" class="calc-modal__form">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Ваше имя *" required class="form-input">
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="+373..." required class="form-input">
+        </div>
+        <button type="submit" class="btn btn--accent btn--full">Отправить заявку</button>
+        <p class="calc-modal__demo-note">Демо-режим: заявка уйдёт в Telegram-бот разработчика.</p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <p>&copy; 1999—<span id="copyrightYear">2026</span> CLEMANTIN S.R.L. — Demo by <a href="../../">OmniCode Studio</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
+  <div class="toast" id="toast"><span class="toast__text" id="toastText"></span></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

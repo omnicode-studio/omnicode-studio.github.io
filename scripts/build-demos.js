@@ -136,11 +136,97 @@ async function buildRenome() {
   console.log(`  [img] total: ${(outSize / 1024 / 1024).toFixed(1)} MB`);
 }
 
-// ---------- CLEMANTIN (placeholder for next session) ----------
+// ---------- CLEMANTIN ----------
 
 async function buildClemantin() {
+  const proj = projects.clemantin;
   console.log('\n=== Building clemantin demo ===');
-  console.log('  (skipped — implement in next phase)');
+
+  // 1. Extract hard-coded data arrays + i18n from server.js by isolating
+  //    the declarations between `const houseProjects = [...]` and the
+  //    closing brace of `const t = {...}` and running them in a Function
+  //    sandbox. Avoids actually starting the express server.
+  const serverPath = path.join(proj.src, 'server.js');
+  const src = fs.readFileSync(serverPath, 'utf-8');
+
+  const start = src.indexOf('const houseProjects');
+  if (start < 0) throw new Error('Cannot locate `const houseProjects` in server.js');
+  const tDef = src.indexOf('const t = {', start);
+  if (tDef < 0) throw new Error('Cannot locate `const t = {` in server.js');
+  // Find end of `t` by brace-matching.
+  let i = src.indexOf('{', tDef);
+  let depth = 0;
+  // single-pass: track strings/templates so we ignore braces inside them
+  let inSingle = false, inDouble = false, inTpl = false, inLineCmt = false, inBlockCmt = false;
+  for (; i < src.length; i++) {
+    const c = src[i], n = src[i + 1];
+    if (inLineCmt) { if (c === '\n') inLineCmt = false; continue; }
+    if (inBlockCmt) { if (c === '*' && n === '/') { inBlockCmt = false; i++; } continue; }
+    if (inSingle) { if (c === '\\') { i++; continue; } if (c === "'") inSingle = false; continue; }
+    if (inDouble) { if (c === '\\') { i++; continue; } if (c === '"') inDouble = false; continue; }
+    if (inTpl)    { if (c === '\\') { i++; continue; } if (c === '`') inTpl = false; continue; }
+    if (c === '/' && n === '/') { inLineCmt = true; i++; continue; }
+    if (c === '/' && n === '*') { inBlockCmt = true; i++; continue; }
+    if (c === "'") { inSingle = true; continue; }
+    if (c === '"') { inDouble = true; continue; }
+    if (c === '`') { inTpl = true; continue; }
+    if (c === '{') depth++;
+    else if (c === '}') {
+      depth--;
+      if (depth === 0) { i++; break; }
+    }
+  }
+  const dataSection = src.slice(start, i);
+
+  let extracted;
+  try {
+    extracted = Function(
+      dataSection +
+      ';\nreturn { houseProjects, articles, portfolioProjects, services, reviews, team, faq, certificates, t };'
+    )();
+  } catch (e) {
+    throw new Error('Failed to eval clemantin data section: ' + e.message);
+  }
+
+  // 2. Write per-array JSON files (only the ones MVP demo actually consumes,
+  //    plus articles/portfolioProjects which are cheap and useful for the
+  //    next phase if we expand)
+  const dataDir = path.join(proj.out, 'data');
+  writeJson(path.join(dataDir, 'house-projects.json'), extracted.houseProjects);
+  writeJson(path.join(dataDir, 'services.json'),       extracted.services);
+  writeJson(path.join(dataDir, 'reviews.json'),        extracted.reviews);
+  writeJson(path.join(dataDir, 'team.json'),           extracted.team);
+  writeJson(path.join(dataDir, 'faq.json'),            extracted.faq);
+  writeJson(path.join(dataDir, 'certificates.json'),   extracted.certificates);
+  writeJson(path.join(dataDir, 'articles.json'),       extracted.articles);
+  writeJson(path.join(dataDir, 'portfolio-projects.json'), extracted.portfolioProjects);
+  writeJson(path.join(dataDir, 'i18n.json'),           extracted.t);
+
+  // 3. Optimize images. clemantin has ~25 images: logo, about, bg, blog, portfolio.
+  console.log('  [img] optimizing...');
+  const imgSrc = path.join(proj.src, 'public', 'images');
+  const imgDst = path.join(proj.out, 'images');
+
+  async function walkAndOptimize(srcDir, dstDir, maxWidth) {
+    if (!fs.existsSync(srcDir)) return 0;
+    let count = 0;
+    for (const entry of fs.readdirSync(srcDir, { withFileTypes: true })) {
+      const s = path.join(srcDir, entry.name);
+      if (entry.isDirectory()) {
+        count += await walkAndOptimize(s, path.join(dstDir, entry.name), maxWidth);
+      } else if (/\.(jpg|jpeg|png)$/i.test(entry.name)) {
+        const base = entry.name.replace(/\.[^.]+$/, '');
+        await optimizeImage(s, path.join(dstDir, base + '.webp'), maxWidth);
+        count++;
+      }
+    }
+    return count;
+  }
+  const count = await walkAndOptimize(imgSrc, imgDst, 1600);
+  console.log(`  [img] ${count} images → webp`);
+
+  const outSize = dirSize(path.join(proj.out, 'images'));
+  console.log(`  [img] total: ${(outSize / 1024 / 1024).toFixed(1)} MB`);
 }
 
 // ---------- helpers ----------
