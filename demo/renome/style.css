@@ -8754,162 +8754,27 @@ h1, h2, h3, h4, h5, h6 {
    DEMO-SPECIFIC ADDITIONS — overrides for portfolio/demo/renome/
    ============================================================ */
 
-/* Top demo banner — pinned above tricolore + header.
-   Height var keeps tricolore/header offsets in sync. */
-:root {
-  --demo-banner-h: 38px;
-}
-.demo-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--demo-banner-h);
-  z-index: 1002;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-  padding: 0 24px;
-  /* Cinematic dark-forest gradient with side glows */
-  background:
-    radial-gradient(circle 500px at 22% 50%, rgba(43, 94, 63, 0.32) 0%, transparent 60%),
-    radial-gradient(circle 500px at 78% 50%, rgba(184, 145, 74, 0.14) 0%, transparent 60%),
-    linear-gradient(180deg, #112019 0%, #0A1410 100%);
-  color: #E8E2D2;
-  font-size: 12.5px;
-  font-weight: 400;
-  letter-spacing: 0.25px;
-  line-height: 1;
-  text-align: center;
-  border-bottom: 1px solid rgba(184, 145, 74, 0.4);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.03),
-    0 4px 16px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
-}
+/* Banner styles live in portfolio/demo/_demo-frame.css and provide
+   --df-banner-h. The renome-specific offsets below depend on it. */
 
-/* DEMO pill on the left (CSS-only, no HTML changes needed) */
-.demo-banner::before {
-  content: 'DEMO';
-  display: inline-flex;
-  align-items: center;
-  padding: 3px 10px;
-  font-family: var(--font);
-  font-size: 9.5px;
-  font-weight: 700;
-  letter-spacing: 1.6px;
-  color: #1A2E20;
-  background: linear-gradient(135deg, #D4B26A 0%, #B8914A 50%, #9F7D3C 100%);
-  border-radius: 100px;
-  flex-shrink: 0;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.25),
-    0 1px 3px rgba(0, 0, 0, 0.25),
-    0 0 12px rgba(184, 145, 74, 0.2);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
-}
-
-/* Demo description text — refined */
-.demo-banner > span:first-child {
-  flex-shrink: 1;
-  min-width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: #E8E2D2;
-  font-weight: 400;
-}
-
-/* Pill-shaped back button with animated arrow + hover fill */
-.demo-banner__back {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 14px 5px 12px;
-  border: 1px solid rgba(184, 145, 74, 0.55);
-  border-radius: 100px;
-  background: rgba(184, 145, 74, 0.05);
-  color: var(--gold);
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-  text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition:
-    background 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.demo-banner__back::before {
-  content: '';
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background-color: currentColor;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.demo-banner__back:hover {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: #14201A;
-  transform: translateY(-1px);
-  box-shadow:
-    0 4px 14px rgba(184, 145, 74, 0.35),
-    0 0 20px rgba(184, 145, 74, 0.18);
-}
-.demo-banner__back:hover::before {
-  transform: translateX(-3px);
-}
-.demo-banner__back:active {
-  transform: translateY(0);
-}
-
-/* Push tricolore + header below the fixed banner.
-   !important is needed because .home-page .header has higher specificity
-   for some properties; we don't want top accidentally overridden. */
+/* Push tricolore + header below the fixed banner from _demo-frame.css.
+   !important defeats .home-page .header's higher specificity. */
 .tricolore {
-  top: var(--demo-banner-h) !important;
+  top: var(--df-banner-h) !important;
 }
 .header,
 .home-page .header {
-  top: calc(var(--demo-banner-h) + 3px) !important;
+  top: calc(var(--df-banner-h) + 3px) !important;
 }
 
 /* Anchor jump offset accounts for banner + header */
 html {
-  scroll-padding-top: calc(var(--demo-banner-h) + var(--header-h, 72px) + 24px);
-}
-
-/* Mobile: hide DEMO pill, compact spacing, keep one-line ellipsis */
-@media (max-width: 600px) {
-  .demo-banner {
-    font-size: 11px;
-    gap: 10px;
-    padding: 0 12px;
-  }
-  .demo-banner::before {
-    display: none;
-  }
-  .demo-banner__back {
-    padding: 4px 10px 4px 8px;
-    font-size: 10.5px;
-    gap: 4px;
-  }
-  .demo-banner__back::before {
-    width: 10px;
-    height: 10px;
-  }
+  scroll-padding-top: calc(var(--df-banner-h) + var(--header-h, 72px) + 24px);
 }
 
 /* Page offset to clear fixed banner + header on internal pages */
 .page-offset {
-  padding-top: calc(var(--demo-banner-h) + var(--header-h, 72px) + 36px);
+  padding-top: calc(var(--df-banner-h) + var(--header-h, 72px) + 36px);
 }
 
 /* Menu search bar */

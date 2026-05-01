@@ -1,0 +1,186 @@
+/* ============================================================
+   _demo-frame.css — universal demo banner shell
+   Used by every demo under portfolio/demo/<name>/.
+   Visually anchors the demo to the omnicode-studio portfolio
+   palette (indigo + cyan + near-black) so it reads as an
+   external "you're inside a demo" overlay, independent of the
+   demo's own theme (renome green/gold, clemantin orange, …).
+   ============================================================ */
+
+:root {
+  --df-banner-h: 38px;
+  --df-bg: #0a0a0f;
+  --df-text: #e4e4e7;
+  --df-text-dim: #a1a1aa;
+  --df-accent: #6366f1;          /* indigo — portfolio brand */
+  --df-accent-2: #06b6d4;        /* cyan — portfolio brand   */
+  --df-pill-fg: #ffffff;
+  --df-border: rgba(255, 255, 255, 0.08);
+  --df-font: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --df-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* -------- Banner shell -------- */
+.demo-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--df-banner-h);
+  z-index: 1002;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 0 24px;
+  font-family: var(--df-font);
+  font-size: 12.5px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  line-height: 1;
+  color: var(--df-text);
+  text-align: center;
+  background:
+    radial-gradient(circle 500px at 22% 50%, rgba(99, 102, 241, 0.18) 0%, transparent 60%),
+    radial-gradient(circle 500px at 78% 50%, rgba(6, 182, 212, 0.14) 0%, transparent 60%),
+    linear-gradient(180deg, #0c0c12 0%, var(--df-bg) 100%);
+  border-bottom: 1px solid var(--df-border);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 4px 16px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* -------- DEMO pill (left, ::before pseudo) -------- */
+.demo-banner::before {
+  content: 'DEMO';
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  font-family: var(--df-font);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: var(--df-pill-fg);
+  background: linear-gradient(135deg, var(--df-accent) 0%, var(--df-accent-2) 100%);
+  border-radius: 100px;
+  flex-shrink: 0;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 1px 3px rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(99, 102, 241, 0.25);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
+}
+
+/* -------- Description text (first <span> child) -------- */
+.demo-banner > span:first-child {
+  flex-shrink: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--df-text);
+  font-weight: 400;
+}
+
+/* -------- Pill button (right, "к портфолио") -------- */
+.demo-banner__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px 5px 12px;
+  border: 1px solid rgba(99, 102, 241, 0.5);
+  border-radius: 100px;
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--df-accent-2);
+  font-family: var(--df-font);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition:
+    background 0.25s var(--df-ease),
+    color 0.25s var(--df-ease),
+    border-color 0.25s var(--df-ease),
+    box-shadow 0.25s var(--df-ease),
+    transform 0.25s var(--df-ease);
+}
+
+/* SVG arrow rendered via CSS mask so it inherits currentColor */
+.demo-banner__back::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
+  transition: transform 0.25s var(--df-ease);
+}
+
+.demo-banner__back:hover,
+.demo-banner__back:focus-visible {
+  background: linear-gradient(135deg, var(--df-accent), var(--df-accent-2));
+  border-color: transparent;
+  color: var(--df-pill-fg);
+  transform: translateY(-1px);
+  box-shadow:
+    0 4px 14px rgba(99, 102, 241, 0.4),
+    0 0 20px rgba(6, 182, 212, 0.2);
+  outline: none;
+}
+
+.demo-banner__back:hover::before,
+.demo-banner__back:focus-visible::before {
+  transform: translateX(-3px);
+}
+
+.demo-banner__back:active {
+  transform: translateY(0);
+}
+
+/* -------- Mobile (< 600px): hide DEMO pill, compact button -------- */
+@media (max-width: 600px) {
+  .demo-banner {
+    font-size: 11px;
+    gap: 10px;
+    padding: 0 12px;
+  }
+  .demo-banner::before {
+    display: none;
+  }
+  .demo-banner__back {
+    padding: 4px 10px 4px 8px;
+    font-size: 10.5px;
+    gap: 4px;
+  }
+  .demo-banner__back::before {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* -------- Reduced motion: drop transforms, keep colour transitions -------- */
+@media (prefers-reduced-motion: reduce) {
+  .demo-banner__back {
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .demo-banner__back:hover,
+  .demo-banner__back:focus-visible {
+    transform: none;
+    box-shadow: none;
+  }
+  .demo-banner__back:hover::before,
+  .demo-banner__back:focus-visible::before {
+    transform: none;
+  }
+}
+
+/* -------- Print: banner is meta, drop it from printouts -------- */
+@media print {
+  .demo-banner {
+    display: none !important;
+  }
+}
