@@ -2,15 +2,21 @@
 (function() {
     const loader = document.getElementById('loader');
     if (!loader) return;
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            loader.classList.add('hidden');
-            document.body.style.overflow = '';
-        }, 900);
-    });
-    if (document.readyState === 'complete') {
-        setTimeout(() => loader.classList.add('hidden'), 900);
+    let hidden = false;
+    function hide() {
+        if (hidden) return;
+        hidden = true;
+        loader.classList.add('hidden');
+        document.body.style.overflow = '';
     }
+    // Hide as soon as DOM is interactive (no need to wait for every external image/iframe)
+    if (document.readyState !== 'loading') {
+        setTimeout(hide, 600);
+    } else {
+        document.addEventListener('DOMContentLoaded', () => setTimeout(hide, 600));
+    }
+    // Belt-and-braces fallback in case something blocks even DOMContentLoaded
+    setTimeout(hide, 2500);
 })();
 
 // ===== Custom Cursor =====
